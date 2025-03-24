@@ -41,15 +41,17 @@ class IODebugger(object):
             user_prompt = f'\nIntention\n{intention}' + f'\nImplementation\n{code}'
         else:
             user_prompt = code
-
+        # print("user_prompt", user_prompt)
         response = self.responser.respond(system_info=system_prompt, user_prompt=user_prompt)
+        # print("response", response)
         code_head = response.find('<code>') + len('<code>')
         code_end = response.find('</code>')
         exp_head = response.find('<exp>') + len('<exp>')
         exp_end = response.find('</exp>')
         code = response[code_head:code_end]
         exp = response[exp_head:exp_end]
-
+        # print("code", code)
+        # print("exp", exp)
         return code, exp
 
 

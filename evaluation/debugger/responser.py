@@ -84,8 +84,68 @@ class TurboResponser(Responser):
         return response['choices'][0]['message']['content']
 
 
+class LiteLLMResponser(Responser):
+    """ LiteLLM responser for open-source models """
+
+    def __init__(self, model_name="ollama/llama3", api_base=None):
+        """
+        Initialize with model name and optional API base URL
+        :param model_name: Name of the model (e.g., 'ollama/llama3', 'huggingface/mistral-7b-instruct')
+        :param api_base: Base URL for API calls (optional, depends on deployment)
+        """
+        import litellm
+        self.litellm = litellm
+        self.model_name = model_name
+        
+        # Set API base if provided
+        if api_base:
+            os.environ["OLLAMA_API_BASE"] = api_base
+            # For other providers, you would set their specific environment variables
+
+    def respond(self, system_info: str, user_prompt: str) -> str:
+        """
+        Generate a response using the specified open-source model
+        :param system_info: System message/instructions
+        :param user_prompt: User's input/query
+        :return: Model's response as a string
+        """
+        try:
+            messages = [
+                {"role": "system", "content": system_info},
+                {"role": "user", "content": user_prompt}
+            ]
+            
+            response = self.litellm.completion(
+                model=self.model_name,
+                messages=messages,
+                max_tokens=2000
+            )
+            
+            return response['choices'][0]['message']['content']
+        except Exception as e:
+            print(f"Error with LiteLLM: {e}")
+            time.sleep(1)  # Brief pause before retry
+            try:
+                response = self.litellm.completion(
+                    model=self.model_name,
+                    messages=[
+                        {"role": "system", "content": system_info},
+                        {"role": "user", "content": user_prompt}
+                    ],
+                    max_tokens=2000
+                )
+                return response['choices'][0]['message']['content']
+            except Exception as e2:
+                print(f"Second attempt failed: {e2}")
+                return f"Error: Failed to generate response with {self.model_name}. Please check model availability and configuration."
+
+
 if __name__ == '__main__':
     # gpt4_responser = GPT4Responser()
-    turbo_responser = TurboResponser()
-    print(turbo_responser.respond(system_info="Translate the text into English",
+    # turbo_responser = TurboResponser()
+    # print(turbo_responser.respond(system_info="Translate the text into English",
+    #                               user_prompt=f"Elle a dit: \"Je suis une fille\""))
+    
+    litellm_responser = LiteLLMResponser(model_name="ollama/llama3:8b-instruct-fp16")
+    print(litellm_responser.respond(system_info="Translate the text into English",
                                   user_prompt=f"Elle a dit: \"Je suis une fille\""))

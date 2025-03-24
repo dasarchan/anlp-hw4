@@ -10,7 +10,7 @@ import leetcode.auth
 from .types import LeetCodeSubmission
 from .utils.leetcode import id_from_slug
 
-
+import pdb
 class LeetCodeEnv(gym.Env):
     """
     Gym environment for LeetCode submissions
@@ -81,7 +81,7 @@ class LeetCodeEnv(gym.Env):
             test_mode=False,
             lang=sub.lang.value,
         )
-
+        # pdb.set_trace()
         # bug: leetcode.rest.ApiException: (403) Reason: Forbidden
         submission_id = self.api_instance.problems_problem_submit_post(
             problem=sub.question_slug, body=submission

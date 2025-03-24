@@ -1,6 +1,6 @@
 import os
-from leetcode_env.environment import LeetCodeEnv
-from leetcode_env.types import LeetCodeSubmission, ProgrammingLanguage
+from .leetcode_env.environment import LeetCodeEnv
+from .leetcode_env.types import LeetCodeSubmission, ProgrammingLanguage
 
 TEST_CASE = {"task_id": "make-number-of-distinct-characters-equal",
              "description": "You are given two 0-indexed strings word1 and word2.\nA move consists of choosing two indices i and j such that 0 <= i < word1.length and 0 <= j < word2.length and swapping word1[i] with word2[j].\nReturn True if it is possible to get the number of distinct characters in word1 and word2 to be equal with exactly one move. Return False otherwise.",
