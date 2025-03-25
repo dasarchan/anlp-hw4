@@ -2,8 +2,11 @@ import os
 import sys
 import json
 import tqdm
+import dotenv
+
 from leetcode_oj import LeetCodeTester
-from debugger import GPT4Responser, TurboResponser, IODebugger
+from leetcode_oj.leetcode_tester_pool import LeetCodeTesterPool
+from debugger import GPT4Responser, TurboResponser, IODebugger, LiteLLMResponser
 
 SETTING = "debug_with_traceback"
 MODEL = sys.argv[1]
@@ -14,7 +17,13 @@ SAVE_DIR = f"{WORK_DIR}/res/{MODEL}/{SETTING}"
 if not os.path.exists(SAVE_DIR):
     os.makedirs(SAVE_DIR)
 
-Responser = {'gpt-4': GPT4Responser, 'gpt-35-turbo': TurboResponser}[MODEL]
+dotenv.load_dotenv()
+
+if MODEL == "llama3":
+    responser = LiteLLMResponser(model_name="ollama/llama3:8b-instruct-fp16")
+else:
+    Responser = {"gpt-4": GPT4Responser, "gpt-35-turbo": TurboResponser}[MODEL]
+    responser = Responser()
 
 
 def load_bug_data(single_only=False):
@@ -38,9 +47,20 @@ def load_bug_data(single_only=False):
 
 
 def main():
-    responser = Responser()
     debugger = IODebugger(responser)
-    tester = LeetCodeTester()
+    # Replace single tester with a tester pool
+    leetcode_sessions = [os.environ['LEETCODE_SESSION']]
+    csrf_tokens = [os.environ['CSRF_TOKEN']]
+    
+    # Add additional sessions if available
+    for i in range(1, 10):  # Check for up to 9 additional accounts
+        session_key = f'LEETCODE_SESSION{i}'
+        csrf_key = f'CSRF_TOKEN{i}'
+        if session_key in os.environ and csrf_key in os.environ:
+            leetcode_sessions.append(os.environ[session_key])
+            csrf_tokens.append(os.environ[csrf_key])
+    
+    tester_pool = LeetCodeTesterPool(leetcode_sessions=leetcode_sessions, csrf_tokens=csrf_tokens)
 
     bug_data = load_bug_data(single_only=True)
     for lang in bug_data.keys():
@@ -52,10 +72,10 @@ def main():
                 res = []
 
                 for case in tqdm.tqdm(bug_data_split, desc=f"{lang}_{bug_type}"):
-                    old_rw, old_res_dict = tester.test(code=case['buggy_code'], language=lang, task_id=case['slug'])
+                    old_rw, old_res_dict = tester_pool.test(code=case['buggy_code'], language=lang, task_id=case['slug'])
                     traceback = old_res_dict.get('runtime_error', None)
                     fixed_code, fixing_exp = debugger.debug(lang=lang, code=case['buggy_code'], traceback=traceback)
-                    rw, res_dict = tester.test(code=fixed_code, language=lang, task_id=case['slug'])
+                    rw, res_dict = tester_pool.test(code=fixed_code, language=lang, task_id=case['slug'])
                     case['fixed_code'] = fixed_code
                     case['fixing_exp'] = fixing_exp
                     case['test_result_bool'] = rw

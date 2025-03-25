@@ -19,3 +19,4 @@ evaluation/leetcode_oj/leetcode_env/__pycache__/__init__.cpython-310.pyc
 evaluation/leetcode_oj/leetcode_env/__pycache__/environment.cpython-310.pyc
 evaluation/leetcode_oj/leetcode_env/__pycache__/types.cpython-310.pyc
 evaluation/leetcode_oj/leetcode_env/utils/__pycache__/leetcode.cpython-310.pyc
+.env

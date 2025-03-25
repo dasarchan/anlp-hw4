@@ -13,12 +13,13 @@ class LeetCodeTesterPool:
         self.current_tester_index = 0
 
     def test(self, code: str, task_id: str, language: str) -> tuple[bool, dict]:
+        print(f"Testing with tester {self.current_tester_index}")
         tester = self.testers[self.current_tester_index]
         try:
             return tester.test(code, task_id, language)
         except Exception as e:
             print(f"Tester {self.current_tester_index} failed with error: {e}")
-            time.sleep(10)
+            time.sleep(20)
             self.current_tester_index = (self.current_tester_index + 1) % len(
                 self.testers
             )

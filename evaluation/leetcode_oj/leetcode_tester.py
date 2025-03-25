@@ -16,8 +16,8 @@ TEST_CASE = {"task_id": "make-number-of-distinct-characters-equal",
              "error_message": "Traceback (most recent call last):\n  File \"LeetCodeBug/bug_generation/src/tmp.py\", line 26, in <module>\n    assert Solution().isItPossible(word1 = \"ac\", word2 = \"b\") == False\n  File \"LeetCodeBug/bug_generation/src/tmp.py\", line 12, in isItPossible\n    mp1, mp2 = Counter(word1), Counter(word2)\nNameError: name 'Counter' is not defined\n",
              "level": "medium"}
 
-leetcode_session = os.environ['LEETCODE_SESSION']
-csrf_token = os.environ['CSRF_TOKEN']
+# leetcode_session = os.environ['LEETCODE_SESSION']
+# csrf_token = os.environ['CSRF_TOKEN']
 
 class LeetCodeTester(object):
 

@@ -2,9 +2,13 @@ import os
 import sys
 import json
 import tqdm
+import dotenv
 
-from leetcode_oj import LeetCodeTester
+from leetcode_oj import LeetCodeTester, LeetCodeTesterPool
 from debugger import GPT4Responser, TurboResponser, IODebugger, LiteLLMResponser
+
+# Load environment variables from .env file
+dotenv.load_dotenv()
 
 SETTING = "debug"
 MODEL = sys.argv[1]
@@ -41,7 +45,20 @@ def load_bug_data():
 
 def main():
     debugger = IODebugger(responser)
-    tester = LeetCodeTester(leetcode_session=os.environ['LEETCODE_SESSION'], csrf_token=os.environ['CSRF_TOKEN'])
+    
+    # Replace single tester with a tester pool
+    leetcode_sessions = [os.environ['LEETCODE_SESSION']]
+    csrf_tokens = [os.environ['CSRF_TOKEN']]
+    
+    # Add additional sessions if available
+    for i in range(1, 10):  # Check for up to 9 additional accounts
+        session_key = f'LEETCODE_SESSION{i}'
+        csrf_key = f'CSRF_TOKEN{i}'
+        if session_key in os.environ and csrf_key in os.environ:
+            leetcode_sessions.append(os.environ[session_key])
+            csrf_tokens.append(os.environ[csrf_key])
+    
+    tester_pool = LeetCodeTesterPool(leetcode_sessions=leetcode_sessions, csrf_tokens=csrf_tokens)
 
     bug_data = load_bug_data()
     for lang in bug_data.keys():
@@ -54,7 +71,7 @@ def main():
 
                 for case in tqdm.tqdm(bug_data_split, desc=f"{lang}_{bug_type}"):
                     fixed_code, fixing_exp = debugger.debug(lang=lang, code=case['buggy_code'])
-                    rw, res_dict = tester.test(code=fixed_code, language=lang, task_id=case['slug'])
+                    rw, res_dict = tester_pool.test(code=fixed_code, language=lang, task_id=case['slug'])
                     case['fixed_code'] = fixed_code
                     case['fixing_exp'] = fixing_exp
                     case['test_result_bool'] = rw

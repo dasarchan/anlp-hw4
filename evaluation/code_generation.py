@@ -4,7 +4,7 @@ import json
 import tqdm
 
 from leetcode_oj import LeetCodeTester
-from debugger import GPT4Responser, TurboResponser, IOCoder
+from debugger import GPT4Responser, TurboResponser, IOCoder, LiteLLMResponser
 
 SETTING = "code_generation"
 MODEL = sys.argv[1]
@@ -15,7 +15,11 @@ SAVE_DIR = f"{WORK_DIR}/res/{MODEL}/{SETTING}"
 if not os.path.exists(SAVE_DIR):
     os.makedirs(SAVE_DIR)
 
-Responser = {'gpt-4': GPT4Responser, 'gpt-35-turbo': TurboResponser}[MODEL]
+if MODEL == "llama3":
+    responser = LiteLLMResponser(model_name="ollama/llama3:8b-instruct-fp16")
+else:
+    Responser = {"gpt-4": GPT4Responser, "gpt-35-turbo": TurboResponser}[MODEL]
+    responser = Responser()
 
 
 def load_bug_data():
@@ -36,7 +40,7 @@ def load_bug_data():
 def main():
     responser = Responser()
     coder = IOCoder(responser)
-    tester = LeetCodeTester()
+    tester = LeetCodeTester(leetcode_session=os.environ['LEETCODE_SESSION'], csrf_token=os.environ['CSRF_TOKEN'])
 
     bug_data = load_bug_data()
     for lang in bug_data.keys():
@@ -57,7 +61,7 @@ def main():
                 case['test_result_bool'] = rw
                 case['test_result_dict'] = res_dict
                 res.append(case)
-
+                break
             with open(save_dir, 'w') as f:
                 json.dump(res, f, indent=4)
 
