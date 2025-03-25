@@ -42,7 +42,7 @@ class LeetCodeTester(object):
 
 if __name__ == '__main__':
 
-    tester = LeetCodeTester(leetcode_session=leetcode_session, csrf_token=csrf_token, cooldown=10)
+    tester = LeetCodeTester(leetcode_session=os.environ['LEETCODE_SESSION'], csrf_token=os.environ['CSRF_TOKEN'], cooldown=10)
     task_id = TEST_CASE['task_id']
     code0 = TEST_CASE['original_code']
     code1 = TEST_CASE['problematic_code']
