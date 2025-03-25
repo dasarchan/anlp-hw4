@@ -2,8 +2,33 @@ from .leetcode_tester import LeetCodeTester
 import dotenv
 import os
 import time
+import pdb
+
+# class LeetCodeTesterPool:
+#     def __init__(self, leetcode_sessions, csrf_tokens, cooldown=10):
+#         self.testers = [
+#             LeetCodeTester(leetcode_session, csrf_token, cooldown=cooldown)
+#             for leetcode_session, csrf_token in zip(leetcode_sessions, csrf_tokens)
+#         ]
+#         self.current_tester_index = 0
+
+#     def test(self, code: str, task_id: str, language: str) -> tuple[bool, dict]:
+#         # print(f"Testing with tester {self.current_tester_index}")
+#         print("testers: ", self.testers[self.current_tester_index].env.csrf_token)
+#         tester = self.testers[self.current_tester_index]
+#         try:
+#             return tester.test(code, task_id, language)
+#         except Exception as e:
+#             print(f"Tester {self.current_tester_index} failed with error: {e}")
+#             # time.sleep(40)
+#             pdb.set_trace()
+#             self.current_tester_index = (self.current_tester_index + 1) % len(
+#                 self.testers
+#             )
+#             return self.test(code, task_id, language)  # Recursively try the next tester
 
 
+# use pdb to reenter the new session token and csrf token
 class LeetCodeTesterPool:
     def __init__(self, leetcode_sessions, csrf_tokens, cooldown=10):
         self.testers = [
@@ -11,21 +36,50 @@ class LeetCodeTesterPool:
             for leetcode_session, csrf_token in zip(leetcode_sessions, csrf_tokens)
         ]
         self.current_tester_index = 0
+        self.cooldown = cooldown
+
+    def update_credentials(self, new_session, new_token):
+        """Update credentials for the current tester"""
+        index = self.current_tester_index
+        self.testers[index] = LeetCodeTester(
+            new_session, new_token, cooldown=self.cooldown
+        )
+        print(f"Updated credentials for tester {index}")
+
+    def reinit_connection(self):
+        """Reinitialize connection for the current tester"""
+        index = self.current_tester_index
+        current_tester = self.testers[index]
+        session = current_tester.env.leetcode_session
+        token = current_tester.env.csrf_token
+        self.testers[index] = LeetCodeTester(session, token, cooldown=self.cooldown)
+        print(f"Reinitialized connection for tester {index}")
 
     def test(self, code: str, task_id: str, language: str) -> tuple[bool, dict]:
-        # print(f"Testing with tester {self.current_tester_index}")
-        # print("testers: ", self.testers[self.current_tester_index].env.csrf_token)
+        print("testers: ", self.testers[self.current_tester_index].env.csrf_token)
         tester = self.testers[self.current_tester_index]
         try:
             return tester.test(code, task_id, language)
         except Exception as e:
             print(f"Tester {self.current_tester_index} failed with error: {e}")
-            time.sleep(40)
+
+            # Enter debugger
+            print("Entering debugger. You can:")
+            print(
+                "1. Update credentials with 'self.update_credentials(new_session, new_token)'"
+            )
+            print("2. Reinitialize connection with 'self.reinit_connection()'")
+            print("3. Continue with 'c'")
+            pdb.set_trace()
+
+            # Keep the pool structure but with only one item
+            # the line below is essentially a no-op when len(self.testers) == 1
             self.current_tester_index = (self.current_tester_index + 1) % len(
                 self.testers
             )
-            return self.test(code, task_id, language)  # Recursively try the next tester
 
+            # Try again
+            return self.test(code, task_id, language)
 
 if __name__ == "__main__":
     TEST_CASE = {
