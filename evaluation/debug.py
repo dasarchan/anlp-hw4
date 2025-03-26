@@ -69,7 +69,8 @@ def main():
     bug_data = load_bug_data()
     for lang in bug_data.keys():
         for bug_type in bug_data[lang]:
-
+            # if lang != 'python3':
+            #     continue
             save_dir = os.path.join(SAVE_DIR, f"{lang}_{bug_type}.json")
             if not os.path.exists(save_dir):
                 bug_data_split = bug_data[lang][bug_type]
