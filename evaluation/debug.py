@@ -28,6 +28,8 @@ if not os.path.exists(SAVE_DIR):
 # Responser = {'gpt-4': GPT4Responser, 'gpt-35-turbo': TurboResponser}[MODEL]
 if MODEL == "llama3":
     responser = LiteLLMResponser(model_name="ollama/llama3:8b-instruct-fp16")
+elif MODEL == "deepseek-coder:33b":
+    responser = LiteLLMResponser(model_name="ollama/deepseek-coder:33b")
 else:
     Responser = {"gpt-4": GPT4Responser, "gpt-35-turbo": TurboResponser}[MODEL]
     responser = Responser()
@@ -69,8 +71,8 @@ def main():
     bug_data = load_bug_data()
     for lang in bug_data.keys():
         for bug_type in bug_data[lang]:
-            # if lang != 'python3':
-            #     continue
+            if lang != 'java':
+                continue
             save_dir = os.path.join(SAVE_DIR, f"{lang}_{bug_type}.json")
             if not os.path.exists(save_dir):
                 bug_data_split = bug_data[lang][bug_type]
