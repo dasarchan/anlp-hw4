@@ -79,6 +79,7 @@ class LeetCodeTesterPool:
             )
 
             # Try again
+            # return None, None
             return self.test(code, task_id, language)
 
 if __name__ == "__main__":
