@@ -60,8 +60,11 @@ class TurboResponser(Responser):
 
     def __init__(self, model='gpt-3.5-turbo'):
         """ environment information """
-        openai.api_key = os.environ.get("OPENAI_API_KEY")
-        openai.api_base = os.environ.get("OPENAI_API_BASE")
+        self.client = openai.OpenAI(
+            api_key=os.environ.get("OPENAI_API_KEY"))
+
+        # openai.api_key = os.environ.get("OPENAI_API_KEY")
+        # openai.api_base = os.environ.get("OPENAI_API_BASE")
 
     def respond(self, system_info: str, user_prompt: str) -> str:
         """
@@ -74,14 +77,14 @@ class TurboResponser(Responser):
             {"role": "system", "content": system_info},
             {"role": "user", "content": user_prompt}
         ]
-        response = openai.ChatCompletion.create(
+        response = self.client.chat.completions.create(
             # model='gpt-4',
-            model='gpt-3.5-turbo',
+            model="gpt-3.5-turbo",
             # model='gpt-4-32k',
             # model='gpt-3.5-turbo-16k',
-            messages=messages
+            messages=messages,
         )
-        return response['choices'][0]['message']['content']
+        return response.choices[0].message.content
 
 
 class LiteLLMResponser(Responser):
@@ -142,10 +145,10 @@ class LiteLLMResponser(Responser):
 
 if __name__ == '__main__':
     # gpt4_responser = GPT4Responser()
-    # turbo_responser = TurboResponser()
-    # print(turbo_responser.respond(system_info="Translate the text into English",
-    #                               user_prompt=f"Elle a dit: \"Je suis une fille\""))
-    
-    litellm_responser = LiteLLMResponser(model_name="ollama/llama3:8b-instruct-fp16")
-    print(litellm_responser.respond(system_info="Translate the text into English",
+    turbo_responser = TurboResponser()
+    print(turbo_responser.respond(system_info="Translate the text into English",
                                   user_prompt=f"Elle a dit: \"Je suis une fille\""))
+    
+    # litellm_responser = LiteLLMResponser(model_name="ollama/llama3:8b-instruct-fp16")
+    # print(litellm_responser.respond(system_info="Translate the text into English",
+    #                               user_prompt=f"Elle a dit: \"Je suis une fille\""))

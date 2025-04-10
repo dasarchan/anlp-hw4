@@ -1,6 +1,6 @@
 # MODEL="gpt-4"
-# MODEL="gpt-35-turbo"
+MODEL="gpt-35-turbo"
 # MODEL="llama3"
-MODEL="deepseek-coder:33b"
+# MODEL="deepseek-coder:33b"
 
 python3 evaluation/debug.py ${MODEL}
