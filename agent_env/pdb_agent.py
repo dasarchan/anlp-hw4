@@ -4,6 +4,9 @@ import sys
 import tempfile
 import subprocess
 from typing import Dict, List, Optional, Any, Tuple, Union
+import threading
+
+DEBUG=True
 
 class PdbAgentEnvironment:
     """
@@ -49,6 +52,7 @@ class PdbAgentEnvironment:
             bufsize=0
         )
         
+        
         self.is_active = True
         
         # Read initial output
@@ -80,6 +84,9 @@ class PdbAgentEnvironment:
         
         # Read output
         output = self._read_output()
+        if DEBUG:
+            print(f"Command: {command}")
+            print(f"Output: {output}")
         
         return {
             "status": "success",
@@ -126,7 +133,6 @@ class PdbAgentEnvironment:
             # Check if we've waited long enough or if the prompt is showing
             if (time.time() - start_time) > timeout or "(Pdb)" in output:
                 break
-                
         return output
     
     def stop(self) -> Dict[str, Any]:

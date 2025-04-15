@@ -7,14 +7,13 @@ from typing import Dict, List, Any, Optional
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from agent_env.llm_agent import LLMDebugAgent
-from agent_env.llama3_integration import Llama3Handler
+from agent_env.llama3_integration import Llama3Handler, OpenAIHandler
 
 # Example code with a bug
 BUBBLE_SORT_CODE = """
 def bubble_sort(arr):
     n = len(arr)
     for i in range(n):
-        # Bug: Should be range(n - i - 1)
         for j in range(0, n - 1):
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
@@ -33,16 +32,16 @@ Please debug the code and fix the issue.
 """
 
 def main():
-    # Define your Llama3 API endpoint and key
-    llama3_endpoint = "https://your-llama3-api-endpoint.com/v1/chat/completions"
-    llama3_api_key = "your-api-key"  # Optional, depending on your setup
-    
-    # Initialize the Llama3 handler
-    llama3_handler = Llama3Handler(llama3_endpoint, llama3_api_key)
+    openai_api_key = os.getenv("OPENAI_API_KEY")
+
+    openai_handler = OpenAIHandler(
+        "gpt-4o-mini",
+        api_key=openai_api_key,
+    )
     
     # Initialize the LLM Debug Agent
     debug_agent = LLMDebugAgent(
-        llm_handler=llama3_handler,
+        llm_handler=openai_handler,
         code=BUBBLE_SORT_CODE,
         problem_description=PROBLEM_DESCRIPTION
     )

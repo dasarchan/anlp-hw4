@@ -61,6 +61,9 @@ Approach:
 4. Test the fix to ensure it resolves the issue
 
 Remember to explain your reasoning as you debug, so the user understands the process.
+
+If you believe you have the answer, write 'FIXED_CODE' and then a python block with your solution.
+This is very important! Without writing FIXED_CODE your solution will not be considered.
 """
         else:
             self.system_prompt = system_prompt
@@ -249,16 +252,15 @@ Please help me identify and fix any bugs in this code.
             if message.get("role") == "assistant":
                 content = message.get("content", "")
                 
-                # Look for code blocks
-                import re
-                code_blocks = re.findall(r"```python\n(.*?)\n```", content, re.DOTALL)
-                if code_blocks:
-                    return code_blocks[0]
-                    
-                # Look for FIXED_CODE marker
-                fixed_code_match = re.search(r"FIXED_CODE:(.*?)(?:DEBUGGING_COMPLETE|FINAL_SOLUTION|$)", content, re.DOTALL)
-                if fixed_code_match:
-                    return fixed_code_match.group(1).strip()
+                # Check if FIXED_CODE is in the content
+                if "FIXED_CODE" in content:
+                    # Look for the first Python code block after FIXED_CODE
+                    import re
+                    code_blocks = re.findall(r"```python\n(.*?)\n```", content, re.DOTALL)
+                    if code_blocks:
+                        return code_blocks[0]
+                        
+                # If we're here, either FIXED_CODE wasn't found or there was no code block
         
         # If no fixed code found, return original code
         return self.code

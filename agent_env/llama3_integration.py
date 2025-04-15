@@ -3,12 +3,37 @@ import os
 import sys
 import requests
 from typing import Dict, List, Any, Optional, Callable, Union
+from abc import ABC, abstractmethod
+import openai
 
-class Llama3Handler:
+class LLMHandler(ABC):
+    """
+    Abstract base class for LLM handlers to use with the LLM Debug Agent.
+    """
+    
+    @abstractmethod
+    def __call__(
+        self, 
+        system_prompt: str, 
+        conversation_history: List[Dict[str, Any]],
+        tools: List[Dict[str, Any]]
+    ) -> Dict[str, Any]:
+        """
+        Call the LLM model with the given prompt, conversation history, and tools.
+        
+        Args:
+            system_prompt: The system prompt for the model
+            conversation_history: The conversation history
+            tools: The available tools
+            
+        Returns:
+            Dict containing the model's response
+        """
+        pass
+
+class Llama3Handler(LLMHandler):
     """
     A handler for the Llama3 model to use with the LLM Debug Agent.
-    This is a placeholder implementation - you'll need to replace it
-    with your actual Llama3 API implementation.
     """
     
     def __init__(self, api_endpoint: str, api_key: Optional[str] = None):
@@ -53,7 +78,6 @@ class Llama3Handler:
         
         # Make the API request
         # NOTE: This is a placeholder - replace with your actual API call
-        # For demonstration purposes, we'll return a mock response
         print(f"Would send request to {self.api_endpoint} with payload: {json.dumps(payload, indent=2)}")
         
         # Mock response - in real implementation, this would be:
@@ -75,3 +99,75 @@ class Llama3Handler:
                 }
             ]
         }
+
+class OpenAIHandler(LLMHandler):
+    """
+    A handler for OpenAI models to use with the LLM Debug Agent.
+    """
+    
+    def __init__(self, model: str, api_key: Optional[str] = None):
+        """
+        Initialize the OpenAI handler.
+        
+        Args:
+            model: The OpenAI model to use (e.g., "gpt-4", "gpt-3.5-turbo")
+            api_key: Optional API key for authentication
+        """
+        self.model = model
+        self.api_key = api_key or os.getenv("OPENAI_API_KEY")
+        if not self.api_key:
+            raise ValueError("OpenAI API key must be provided as an argument or as OPENAI_API_KEY environment variable")
+        
+        self.client = openai.OpenAI(api_key=self.api_key)
+        
+    def __call__(
+        self, 
+        system_prompt: str, 
+        conversation_history: List[Dict[str, Any]],
+        tools: List[Dict[str, Any]]
+    ) -> Dict[str, Any]:
+        """
+        Call the OpenAI model with the given prompt, conversation history, and tools.
+        
+        Args:
+            system_prompt: The system prompt for the model
+            conversation_history: The conversation history
+            tools: The available tools
+            
+        Returns:
+            Dict containing the model's response
+        """
+        messages = [{"role": "system", "content": system_prompt}] + conversation_history
+        
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+                tools=tools,
+                tool_choice="auto"
+            )
+            
+            # Convert the OpenAI response to the expected format
+            message = response.choices[0].message
+            result = {
+                "role": "assistant",
+                "content": message.content or ""
+            }
+            
+            # Include tool calls if present
+            if message.tool_calls:
+                result["tool_calls"] = []
+                for tool_call in message.tool_calls:
+                    result["tool_calls"].append({
+                        "id": tool_call.id,
+                        "type": "function",
+                        "function": {
+                            "name": tool_call.function.name,
+                            "arguments": tool_call.function.arguments
+                        }
+                    })
+            
+            return result
+        except Exception as e:
+            print(f"Error calling OpenAI API: {e}")
+            raise
