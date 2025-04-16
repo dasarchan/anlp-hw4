@@ -25,6 +25,15 @@ class PdbTools:
         """
         return self.pdb_env.start()
     
+    def modify_code(self, code: str) -> None:
+        """
+        Modify the code in the debugger context.
+        
+        Returns:
+            None
+        """
+        self.pdb_env.modify_code(code)
+
     def execute_pdb_command(self, command: str) -> Dict[str, Any]:
         """
         Execute a pdb command.
@@ -124,6 +133,12 @@ class PdbTools:
             "start_debugging": {
                 "description": "Start a debugging session",
                 "parameters": {}
+            },
+            "modify_code": {
+                "description": "Enter new code to use in the debugger - will take effect at the next start_debugging call",
+                "parameters": {
+                    "code": "The new code to use in the debugger"
+                }
             },
             "execute_pdb_command": {
                 "description": "Execute a pdb command",

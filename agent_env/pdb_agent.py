@@ -65,6 +65,15 @@ class PdbAgentEnvironment:
             "problem_description": self.problem_description
         }
     
+    def modify_code(self, code: str) -> None:
+        """
+        Modify the code in the temporary file.
+        
+        Args:
+            code: The new code to write to the temporary file
+        """
+        self.code = code
+    
     def execute_command(self, command: str) -> Dict[str, Any]:
         """
         Execute a pdb command.
@@ -77,7 +86,6 @@ class PdbAgentEnvironment:
         """
         if not self.is_active or self.pdb_process is None:
             return {"status": "error", "message": "Debugging session not active"}
-        
         # Write command to pdb stdin
         self.pdb_process.stdin.write(command + "\n")
         self.pdb_process.stdin.flush()

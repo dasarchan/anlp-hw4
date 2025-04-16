@@ -10,26 +10,10 @@ from agent_env.llm_agent import LLMDebugAgent
 from agent_env.llama3_integration import Llama3Handler, OpenAIHandler
 
 # Example code with a bug
-BUBBLE_SORT_CODE = """
-def bubble_sort(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(0, n - 1):
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
-    return arr
+BUBBLE_SORT_CODE = "\nclass Solution:\n    def makeSmallestPalindrome(self, s: str) -> str\n        before = 0\n        after = len(s)-1\n        l = [i for i in s]\n        while before <= len(s)\n            l[before] = self.min(l[before], l[after])\n            l[after] = l[before]\n            before+=1\n            after-=1\n        return \"\".join(l)\n"
 
-# Test the function
-test_arr = [64, 34, 25, 12, 22, 11, 90]
-sorted_arr = bubble_sort(test_arr)
-print(sorted_arr)
-"""
+PROBLEM_DESCRIPTION = "You are given a string s consisting of lowercase English letters, and you are allowed to perform operations on it. In one operation, you can replace a character in s with another lowercase English letter.\nYour task is to make s a palindrome with the minimum number of operations possible. If there are multiple palindromes that can be made using the minimum number of operations, make the lexicographically smallest one.\nA string a is lexicographically smaller than a string b (of the same length) if in the first position where a and b differ, string a has a letter that appears earlier in the alphabet than the corresponding letter in b.\nReturn the resulting palindrome string."
 
-PROBLEM_DESCRIPTION = """
-The bubble_sort function is supposed to sort an array in ascending order using the bubble sort algorithm.
-However, there seems to be a bug because the function is not correctly sorting the array.
-Please debug the code and fix the issue.
-"""
 
 def main():
     openai_api_key = os.getenv("OPENAI_API_KEY")
