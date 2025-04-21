@@ -133,12 +133,14 @@ class PdbAgentEnvironment:
         start_time = time.time()
         
         while True:
-            # Check if we have output to read
-            if self.pdb_process.stdout in select.select([self.pdb_process.stdout], [], [], 0.1)[0]:
-                line = self.pdb_process.stdout.readline()
-                if not line:
+            # Check if we have output to read using select with a short timeout
+            ready_to_read, _, _ = select.select([self.pdb_process.stdout], [], [], 0.1)
+            if self.pdb_process.stdout in ready_to_read:
+                # Read one character at a time to avoid blocking
+                char = self.pdb_process.stdout.read(1)
+                if not char:
                     break
-                output += line
+                output += char
             
             # Check if we've waited long enough or if the prompt is showing
             if (time.time() - start_time) > timeout or "(Pdb)" in output:
