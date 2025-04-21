@@ -19,7 +19,7 @@ def main():
     openai_api_key = os.getenv("OPENAI_API_KEY")
 
     openai_handler = OpenAIHandler(
-        "gpt-3.5-turbo",
+        "gpt-4o-mini",
         api_key=openai_api_key,
     )
     
