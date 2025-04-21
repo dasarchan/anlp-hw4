@@ -74,26 +74,28 @@ class PdbAgentEnvironment:
         """
         self.code = code
     
-    def execute_command(self, command: str) -> Dict[str, Any]:
+    def execute_command(self, command: str, timeout: float = 10.0) -> Dict[str, Any]:
         """
         Execute a pdb command.
         
         Args:
             command: The pdb command to execute
+            timeout: Timeout in seconds for command execution (default: 10s)
             
         Returns:
             Dict containing the result of the command execution
         """
+        if DEBUG:
+            print(f"Command: {command}")
         if not self.is_active or self.pdb_process is None:
             return {"status": "error", "message": "Debugging session not active"}
         # Write command to pdb stdin
         self.pdb_process.stdin.write(command + "\n")
         self.pdb_process.stdin.flush()
         
-        # Read output
-        output = self._read_output()
+        # Read output with timeout
+        output = self._read_output(timeout=timeout)
         if DEBUG:
-            print(f"Command: {command}")
             print(f"Output: {output}")
         
         return {

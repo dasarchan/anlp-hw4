@@ -10,9 +10,9 @@ from agent_env.llm_agent import LLMDebugAgent
 from agent_env.llama3_integration import Llama3Handler, OpenAIHandler
 
 # Example code with a bug
-BUBBLE_SORT_CODE = "\nclass Solution:\n    def makeSmallestPalindrome(self, s: str) -> str\n        before = 0\n        after = len(s)-1\n        l = [i for i in s]\n        while before <= len(s)\n            l[before] = self.min(l[before], l[after])\n            l[after] = l[before]\n            before+=1\n            after-=1\n        return \"\".join(l)\n"
+BUGGY_CODE = "\nclass Solution:\n    def restoreIpAddresses(self, s: str) -> List[str]:\n        res=[]\n        cur=[]\n        def backtrack(i):\n            if i==len(s) and len(cur)==4:\n                res.append(\".\".join(cur))\n                return\n            if len(cur)>4 or i>len(s):\n                return\n            if s[i]=='0':\n                cur.append(s[i])\n                backtrack(i+1)\n                cur.pop()\n                return\n            j=0\n            while j<4 and i+j<len(s)\n                if int(s[i:i+j+1])<256:\n                    cur.append(s[i:i+j+1])\n                    backtrack(i+j+1)\n                    cur.pop()\n                j+=1\n        backtrack(0)\n        return 'res\n"
 
-PROBLEM_DESCRIPTION = "You are given a string s consisting of lowercase English letters, and you are allowed to perform operations on it. In one operation, you can replace a character in s with another lowercase English letter.\nYour task is to make s a palindrome with the minimum number of operations possible. If there are multiple palindromes that can be made using the minimum number of operations, make the lexicographically smallest one.\nA string a is lexicographically smaller than a string b (of the same length) if in the first position where a and b differ, string a has a letter that appears earlier in the alphabet than the corresponding letter in b.\nReturn the resulting palindrome string."
+PROBLEM_DESCRIPTION = "A valid IP address consists of exactly four integers separated by single dots. Each integer is between 0 and 255 (inclusive) and cannot have leading zeros.\n\nFor example, \"0.1.2.201\" and \"192.168.1.1\" are valid IP addresses, but \"0.011.255.245\", \"192.168.1.312\" and \"192.168@1.1\" are invalid IP addresses.\n\nGiven a string s containing only digits, return all possible valid IP addresses that can be formed by inserting dots into s. You are not allowed to reorder or remove any digits in s. You may return the valid IP addresses in any order."
 
 
 def main():
@@ -26,7 +26,7 @@ def main():
     # Initialize the LLM Debug Agent
     debug_agent = LLMDebugAgent(
         llm_handler=openai_handler,
-        code=BUBBLE_SORT_CODE,
+        code=BUGGY_CODE,
         problem_description=PROBLEM_DESCRIPTION
     )
     

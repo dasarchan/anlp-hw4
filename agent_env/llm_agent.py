@@ -54,6 +54,10 @@ The main pdb commands you can use include:
 - q (quit): Quit from the debugger
 - ! statement: Execute the Python statement in the current context
 
+You can also start and stop debugging, as well as modify the underlying code.
+
+If debugging stops, you can restart it after modifying code. You need to restart for modify_code to take effect.
+
 Approach:
 1. First, understand the problem and the code
 2. Use the debugger to step through the code and examine variables
@@ -131,6 +135,8 @@ This is very important! Without writing FIXED_CODE your solution will not be con
         """
         if tool_name == "start_debugging":
             return self.pdb_tools.start_debugging()
+        if tool_name == "modify_code":
+            self.pdb_tools.modify_code(tool_params["code"])
         elif tool_name == "execute_pdb_command":
             return self.pdb_tools.execute_pdb_command(tool_params["command"])
         elif tool_name == "execute_python_code":
