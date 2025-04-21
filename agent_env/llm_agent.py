@@ -34,6 +34,8 @@ class LLMDebugAgent:
         # Set up the PDB environment
         self.pdb_env = PdbAgentEnvironment(code, problem_description)
         self.pdb_tools = PdbTools(self.pdb_env)
+
+        self.pdb_env.start()
         
         # Default system prompt if none is provided
         if system_prompt is None:
