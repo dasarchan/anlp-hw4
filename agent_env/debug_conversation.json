@@ -71,8 +71,8 @@
         "id": "call_TqQn5dRg4GblGS5Xnv7Uwhc4",
         "type": "function",
         "function": {
-          "name": "execute_pdb_command",
-          "arguments": "{\"command\":\"n\"}"
+          "name": "list_code",
+          "arguments": "{\"start_line\":\"1\",\"end_line\":\"30\"}"
         }
       }
     ]
