@@ -269,6 +269,4 @@ Please help me identify and fix any bugs in this code.
                         return code_blocks[0]
                         
                 # If we're here, either FIXED_CODE wasn't found or there was no code block
-        
-        # If no fixed code found, return original code
-        return self.code
+        return "Error: No fixed code found. Please check the conversation history."
