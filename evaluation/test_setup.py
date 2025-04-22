@@ -131,10 +131,16 @@ for filename in os.listdir("res/llama3/debug"):
     if filename.startswith("python") and filename.endswith(".json"):
         filepath = os.path.join("res/llama3/debug", filename)
         with open(filepath, 'r') as f:
-            all_combined.extend(json.load(f))
+            res_list = json.load(f)
+            for r in res_list:
+                r["filename"] = filename
+            all_combined.extend(res_list)
 
 with_dicts = []
 for problem in all_combined:
+    if "numMovesStonesII" in problem["buggy_code"]:
+        print(problem["buggy_code"])
+        print(problem["filename"])
     buggy_code = problem["buggy_code"]
     test_dict = test_dicts_dict.get(problem["slug"])
     if test_dict:
@@ -150,8 +156,8 @@ for problem in all_combined:
         continue
 
 
-for problem in all_combined[:10]:
-    print(problem["buggy_code"])
+# for problem in all_combined[:10]:
+#     print(problem["buggy_code"])
 
 
 # Save the test_dicts_dict to a JSON file
