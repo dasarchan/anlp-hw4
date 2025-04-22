@@ -30,25 +30,12 @@ def execute_debug_agent(code, problem_description, openai_handler):
     result = debug_agent.run()
 
     # Print the results
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 246eeb2 (update 200 instances)
-    # print("\n" + "=" * 50)
-    # print("DEBUGGING RESULTS")
-    # print("=" * 50)
-    # print("\nOriginal Code:")
-    # print(result["original_code"])
-<<<<<<< HEAD
-=======
+
     print("\n" + "=" * 50)
     print("DEBUGGING RESULTS")
     print("=" * 50)
     print("\nOriginal Code:")
     print(result["original_code"])
->>>>>>> 0a3fd3b (some init result)
-=======
->>>>>>> 246eeb2 (update 200 instances)
 
     print("\nFixed Code:")
     print(result["fixed_code"])
@@ -56,24 +43,17 @@ def execute_debug_agent(code, problem_description, openai_handler):
     print("\nNumber of turns:", result["turns"])
 
     # Save the full conversation history to a file
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     # with open("debug_conversation.json", "w") as f:
     #     json.dump(result["conversation"], f, indent=2)
 
     # print("\nFull conversation history saved to debug_conversation.json")
-=======
+
     with open("debug_conversation.json", "w") as f:
         json.dump(result["conversation"], f, indent=2)
 
     print("\nFull conversation history saved to debug_conversation.json")
->>>>>>> 0a3fd3b (some init result)
-=======
-    # with open("debug_conversation.json", "w") as f:
-    #     json.dump(result["conversation"], f, indent=2)
 
-    # print("\nFull conversation history saved to debug_conversation.json")
->>>>>>> 246eeb2 (update 200 instances)
     return result["fixed_code"], result["turns"], result["conversation"]
 
 def main():
