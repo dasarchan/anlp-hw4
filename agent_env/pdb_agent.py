@@ -135,36 +135,17 @@ class PdbAgentEnvironment:
         """Execute Python code in the debugger."""
         return self.execute_command("!{}".format(code))
     
-    def _read_output(self, timeout: float = 0.5) -> str:
-        """
-        Read output from the pdb process.
-        
-        Args:
-            timeout: Timeout in seconds for reading output
+    def get_process_status(self) -> Dict[str, Any]:
+        """Get detailed status about the pdb process."""
+        if not self.is_active or self.pdb_process is None:
+            return {"status": "inactive"}
             
-        Returns:
-            String containing the output from pdb
-        """
-        import time
-        import select
-        
-        output = ""
-        start_time = time.time()
-        
-        while True:
-            # Check if we have output to read using select with a short timeout
-            ready_to_read, _, _ = select.select([self.pdb_process.stdout], [], [], 0.1)
-            if self.pdb_process.stdout in ready_to_read:
-                # Read one character at a time to avoid blocking
-                char = self.pdb_process.stdout.read(1)
-                if not char:
-                    break
-                output += char
-            
-            # Check if we've waited long enough or if the prompt is showing
-            if (time.time() - start_time) > timeout or "(Pdb)" in output:
-                break
-        return output
+        is_alive = self.pdb_process.isalive()
+        return {
+            "status": "active" if is_alive else "terminated",
+            "is_running": is_alive,
+            "exit_status": self.pdb_process.exitstatus if not is_alive else None
+        }
     
     def stop(self) -> Dict[str, Any]:
         """Stop the debugging session."""
