@@ -5,6 +5,11 @@ import requests
 from typing import Dict, List, Any, Optional, Callable, Union
 from abc import ABC, abstractmethod
 import openai
+import torch
+
+# Import vLLM components for efficient inference
+from vllm import LLM, SamplingParams
+from vllm.utils import random_uuid
 
 class LLMHandler(ABC):
     """
@@ -33,19 +38,51 @@ class LLMHandler(ABC):
 
 class Llama3Handler(LLMHandler):
     """
-    A handler for the Llama3 model to use with the LLM Debug Agent.
+    A handler for the Llama 3.1 model using vLLM to use with the LLM Debug Agent.
+    This implementation leverages vLLM for GPU-accelerated inference with tool calling.
     """
     
-    def __init__(self, api_endpoint: str, api_key: Optional[str] = None):
+    def __init__(
+        self,
+        model_name: str = "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        gpu_memory_utilization: float = 0.9,
+        max_model_len: int = 8192,
+        tensor_parallel_size: int = 1,
+        dtype: str = "bfloat16",
+        use_tool_calling: bool = True
+    ):
         """
-        Initialize the Llama3 handler.
+        Initialize the Llama 3.1 handler with vLLM.
         
         Args:
-            api_endpoint: The endpoint for the Llama3 API
-            api_key: Optional API key for authentication
+            model_name: HuggingFace model identifier
+            gpu_memory_utilization: Fraction of GPU memory to use
+            max_model_len: Maximum sequence length
+            tensor_parallel_size: Number of GPUs to use
+            dtype: Model precision (bfloat16, float16, or float32)
+            use_tool_calling: Whether to enable tool calling functionality
         """
-        self.api_endpoint = api_endpoint
-        self.api_key = api_key
+        # Convert string dtype to torch dtype
+        if dtype == "bfloat16":
+            torch_dtype = torch.bfloat16
+        elif dtype == "float16":
+            torch_dtype = torch.float16
+        else:
+            torch_dtype = torch.float32
+            
+        # Initialize vLLM model with GPU support
+        self.model = LLM(
+            model=model_name,
+            tensor_parallel_size=tensor_parallel_size,
+            gpu_memory_utilization=gpu_memory_utilization,
+            max_model_len=max_model_len,
+            dtype=torch_dtype,
+            trust_remote_code=True,
+            enable_tool_calls=use_tool_calling,
+            tool_call_parser="llama3_json",
+        )
+        
+        self.use_tool_calling = use_tool_calling
         
     def __call__(
         self, 
@@ -54,7 +91,8 @@ class Llama3Handler(LLMHandler):
         tools: List[Dict[str, Any]]
     ) -> Dict[str, Any]:
         """
-        Call the Llama3 model with the given prompt, conversation history, and tools.
+        Call the Llama 3.1 model with the given prompt, conversation history, and tools.
+        Uses vLLM for efficient inference with GPU acceleration.
         
         Args:
             system_prompt: The system prompt for the model
@@ -64,41 +102,98 @@ class Llama3Handler(LLMHandler):
         Returns:
             Dict containing the model's response
         """
-        # Prepare the request payload
-        payload = {
-            "messages": [
-                {"role": "system", "content": system_prompt}
-            ] + conversation_history,
-            "tools": tools
-        }
+        # Prepare the full message list with system prompt
+        messages = [{"role": "system", "content": system_prompt}] + conversation_history
         
-        headers = {"Content-Type": "application/json"}
-        if self.api_key:
-            headers["Authorization"] = f"Bearer {self.api_key}"
+        # Format prompts for vLLM
+        from transformers import AutoTokenizer
         
-        # Make the API request
-        # NOTE: This is a placeholder - replace with your actual API call
-        print(f"Would send request to {self.api_endpoint} with payload: {json.dumps(payload, indent=2)}")
+        # Load the tokenizer for the model to apply chat template
+        tokenizer = AutoTokenizer.from_pretrained(self.model.llm_engine.model_config.hf_config.name_or_path)
+        formatted_prompt = tokenizer.apply_chat_template(
+            messages, 
+            tokenize=False,
+            add_generation_prompt=True
+        )
         
-        # Mock response - in real implementation, this would be:
-        # response = requests.post(self.api_endpoint, json=payload, headers=headers)
-        # return response.json()
+        # Set up sampling parameters for inference
+        sampling_params = SamplingParams(
+            temperature=0.7,
+            top_p=0.95,
+            max_tokens=1024,
+            stop_token_ids=[tokenizer.eos_token_id],
+        )
         
-        # For now, return a mock response that would execute the "start_debugging" tool
-        return {
+        # If using tool calling, add tool specification
+        if self.use_tool_calling and tools:
+            # Configure sampling params with tool specification
+            sampling_params = SamplingParams(
+                temperature=0.7,
+                top_p=0.95,
+                max_tokens=1024,
+                stop_token_ids=[tokenizer.eos_token_id],
+                tool_choices=tools
+            )
+            
+        # Generate completion using vLLM
+        outputs = self.model.generate(
+            prompts=[formatted_prompt],
+            sampling_params=sampling_params,
+        )
+        
+        # Process the output
+        raw_output = outputs[0].outputs[0].text
+        
+        # Parse the response to extract content and potential tool calls
+        result = {
             "role": "assistant",
-            "content": "I'll help you debug this code. Let me start the debugging session to examine the code.",
-            "tool_calls": [
-                {
-                    "id": "call_abc123",
-                    "type": "function",
-                    "function": {
-                        "name": "start_debugging",
-                        "arguments": "{}"
-                    }
-                }
-            ]
+            "content": raw_output
         }
+        
+        # Extract tool calls if present
+        # Note: vLLM's tool parser should handle most of this, but we need to 
+        # extract the structured response format here
+        if self.use_tool_calling and "Action:" in raw_output:
+            # Simple parsing for tool calls in the format:
+            # Action: tool_name
+            # Action Input: {"param1": "value1"}
+            lines = raw_output.split('\n')
+            tool_name = None
+            tool_args = None
+            
+            for line in lines:
+                if line.startswith("Action:"):
+                    tool_name = line.replace("Action:", "").strip()
+                elif line.startswith("Action Input:"):
+                    tool_args = line.replace("Action Input:", "").strip()
+            
+            if tool_name and tool_args:
+                try:
+                    # For JSON-formatted arguments
+                    tool_args_dict = json.loads(tool_args)
+                    
+                    # Format the tool call in the expected structure
+                    result["tool_calls"] = [{
+                        "id": f"call_{random_uuid()}",
+                        "type": "function",
+                        "function": {
+                            "name": tool_name,
+                            "arguments": json.dumps(tool_args_dict)
+                        }
+                    }]
+                    
+                    # Remove the tool calling syntax from the content
+                    clean_content = raw_output
+                    for line in lines:
+                        if line.startswith("Action:") or line.startswith("Action Input:"):
+                            clean_content = clean_content.replace(line, "")
+                    result["content"] = clean_content.strip()
+                    
+                except json.JSONDecodeError:
+                    # If the arguments aren't valid JSON, keep the original output
+                    pass
+        
+        return result
 
 class OpenAIHandler(LLMHandler):
     """
