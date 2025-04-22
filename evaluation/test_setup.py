@@ -143,6 +143,7 @@ for problem in all_combined:
             buggy_code += f"\n{line}"
         problem["buggy_code"] = buggy_code
         problem["buggy_code"] = "from typing import *\n" + problem["buggy_code"]
+        problem["test_dict"] = test_dict
         with_dicts.append(problem)
     else:
         print(f"Test not found for slug: {problem['slug']}")
