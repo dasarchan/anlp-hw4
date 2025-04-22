@@ -231,6 +231,9 @@
     "fixed_code": "\nmod = 10**9+7\n\nclass Solution:\ndef countAnagrams(self, s: str) -> int:\n\n    l = s.split()\n    ans = 1\n\n    for i in l:\n        d = {}\n    \n        for j in i:\n            if(d.get(j)):\n                d[j] += 1\n            else:\n                d[j] = 1  \n    \n        duplicates = 1\n        for j in d.values():\n            duplicates *= math.factorial(j)\n        curr = math.factorial(len(i))//duplicates\n\n        ans *= curr\n        ans = ans%mod\n\n    return ans\n",
     "num_turns": 15
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 246eeb2 (update 200 instances)
   },
   "word-subsets_syntax error": {
     "id": [
@@ -1639,7 +1642,10 @@
     ],
     "fixed_code": "\nclass Solution:\n    def fizzBuzz(self, n: int) -> List[str]:\n        arr=[]\n        for i in range(0,n+1):\n            if i % 3==0 and  i % 5==0 :\n                arr.append(\"FizzBuzz\")\n            elif i % 3==0:\n                arr.append(\"Fizz\")\n            elif i % 5==0 :\n                arr.append(\"Buzz\")\n  \n            else:\n                arr.append(str(i))\n        return(arr)\n",
     "num_turns": 9
+<<<<<<< HEAD
 =======
 >>>>>>> 0a3fd3b (some init result)
+=======
+>>>>>>> 246eeb2 (update 200 instances)
   }
 }
