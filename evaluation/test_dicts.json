@@ -1,0 +1,2017 @@
+{
+    "baseball-game": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0682_baseballGame.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0682_baseballGame.py",
+        "id": "0682",
+        "slug": "baseball-game",
+        "test_lines": [
+            "assert(Solution().calPoints(ops=['5', '2', 'C', 'D', '+']) == 30)",
+            "assert(Solution().calPoints(ops=['5', '-2', '4', 'C', 'D', '9', '+', '+']) == 27)",
+            "assert(Solution().calPoints(ops=['1', 'C']) == 0)"
+        ]
+    },
+    "partition-string-into-substrings-with-values-at-most-k": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2522_partitionStringIntoSubstringsWithValuesAtMostK.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2522_partitionStringIntoSubstringsWithValuesAtMostK.py",
+        "id": "2522",
+        "slug": "partition-string-into-substrings-with-values-at-most-k",
+        "test_lines": [
+            "assert(Solution().minimumPartition(s=165462, k=60) == 4)",
+            "assert(Solution().minimumPartition(s=238182, k=5) == -1)"
+        ]
+    },
+    "edit-distance": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0072_editDistance.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0072_editDistance.py",
+        "id": "0072",
+        "slug": "edit-distance",
+        "test_lines": [
+            "assert(Solution().minDistance(word1=horse, word2=ros) == 3)",
+            "assert(Solution().minDistance(word1=intention, word2=execution) == 5)"
+        ]
+    },
+    "longest-arithmetic-subsequence-of-given-difference": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1218_longestArithmeticSubsequenceOfGivenDifference.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1218_longestArithmeticSubsequenceOfGivenDifference.py",
+        "id": "1218",
+        "slug": "longest-arithmetic-subsequence-of-given-difference",
+        "test_lines": [
+            "assert(Solution().longestSubsequence(arr=[1, 2, 3, 4], difference=1) == 4)",
+            "assert(Solution().longestSubsequence(arr=[1, 3, 5, 7], difference=1) == 1)",
+            "assert(Solution().longestSubsequence(arr=[1, 5, 7, 8, 5, 3, 4, 2, 1], difference=-2) == 4)"
+        ]
+    },
+    "maximum-number-of-moves-in-a-grid": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2684_maximumNumberOfMovesInAGrid.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2684_maximumNumberOfMovesInAGrid.py",
+        "id": "2684",
+        "slug": "maximum-number-of-moves-in-a-grid",
+        "test_lines": [
+            "assert(Solution().maxMoves(grid=[[2, 4, 3, 5], [5, 4, 9, 3], [3, 4, 2, 11], [10, 9, 13, 15]]) == 3)",
+            "assert(Solution().maxMoves(grid=[[3, 2, 4], [2, 1, 9], [1, 1, 7]]) == 0)"
+        ]
+    },
+    "most-common-word": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0819_mostCommonWord.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0819_mostCommonWord.py",
+        "id": "0819",
+        "slug": "most-common-word",
+        "test_lines": [
+            "assert(Solution().mostCommonWord(paragraph=Bob hit a ball, the hit BALL flew far after it was hit., banned=['hit']) == ball)",
+            "assert(Solution().mostCommonWord(paragraph=a., banned=[]) == a)"
+        ]
+    },
+    "sort-colors": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0075_sortColors.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0075_sortColors.py",
+        "id": "0075",
+        "slug": "sort-colors",
+        "test_lines": [
+            "assert(Solution().sortColors(nums=[2, 0, 2, 1, 1, 0]) == [0, 0, 1, 1, 2, 2])",
+            "assert(Solution().sortColors(nums=[2, 0, 1]) == [0, 1, 2])"
+        ]
+    },
+    "check-if-there-is-a-valid-partition-for-the-array": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2369_checkIfThereIsAValidPartitionForTheArray.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2369_checkIfThereIsAValidPartitionForTheArray.py",
+        "id": "2369",
+        "slug": "check-if-there-is-a-valid-partition-for-the-array",
+        "test_lines": [
+            "assert(Solution().validPartition(nums=[4, 4, 4, 5, 6]) == True)",
+            "assert(Solution().validPartition(nums=[1, 1, 1, 2]) == False)"
+        ]
+    },
+    "split-linked-list-in-parts": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0725_splitLinkedListInParts.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0725_splitLinkedListInParts.py",
+        "id": "0725",
+        "slug": "split-linked-list-in-parts",
+        "test_lines": [
+            "assert(Solution().splitListToParts(head=[1, 2, 3], k=5) == [[1], [2], [3], [], []])",
+            "assert(Solution().splitListToParts(head=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], k=3) == [[1, 2, 3, 4], [5, 6, 7], [8, 9, 10]])"
+        ]
+    },
+    "maximum-strength-of-a-group": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2708_maximumStrengthOfAGroup.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2708_maximumStrengthOfAGroup.py",
+        "id": "2708",
+        "slug": "maximum-strength-of-a-group",
+        "test_lines": [
+            "assert(Solution().maxStrength(nums=[3, -1, -5, 2, 5, -9]) == 1350)",
+            "assert(Solution().maxStrength(nums=[-4, -5, -4]) == 20)"
+        ]
+    },
+    "find-the-kth-largest-integer-in-the-array": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1985_findTheKthLargestIntegerInTheArray.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1985_findTheKthLargestIntegerInTheArray.py",
+        "id": "1985",
+        "slug": "find-the-kth-largest-integer-in-the-array",
+        "test_lines": [
+            "assert(Solution().kthLargestNumber(nums=['3', '6', '7', '10'], k=4) == 3)",
+            "assert(Solution().kthLargestNumber(nums=['2', '21', '12', '1'], k=3) == 2)",
+            "assert(Solution().kthLargestNumber(nums=['0', '0'], k=2) == 0)"
+        ]
+    },
+    "partition-labels": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0763_partitionLabels.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0763_partitionLabels.py",
+        "id": "0763",
+        "slug": "partition-labels",
+        "test_lines": [
+            "assert(Solution().partitionLabels(s=ababcbacadefegdehijhklij) == [9, 7, 8])",
+            "assert(Solution().partitionLabels(s=eccbbbbdec) == [10])"
+        ]
+    },
+    "median-of-two-sorted-arrays": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0004_medianOfTwoSortedArrays.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0004_medianOfTwoSortedArrays.py",
+        "id": "0004",
+        "slug": "median-of-two-sorted-arrays",
+        "test_lines": [
+            "assert(Solution().findMedianSortedArrays(nums1=[1, 3], nums2=[2]) == 2.0)",
+            "assert(Solution().findMedianSortedArrays(nums1=[1, 2], nums2=[3, 4]) == 2.5)"
+        ]
+    },
+    "restore-ip-addresses": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0093_restoreIpAddresses.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0093_restoreIpAddresses.py",
+        "id": "0093",
+        "slug": "restore-ip-addresses",
+        "test_lines": [
+            "assert(Solution().restoreIpAddresses(s=25525511135) == ['255.255.11.135', '255.255.111.35'])",
+            "assert(Solution().restoreIpAddresses(s=0000) == ['0.0.0.0'])",
+            "assert(Solution().restoreIpAddresses(s=101023) == ['1.0.10.23', '1.0.102.3', '10.1.0.23', '10.10.2.3', '101.0.2.3'])"
+        ]
+    },
+    "minimum-flips-to-make-a-or-b-equal-to-c": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1318_minimumFlipsToMakeAOrBEqualToC.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1318_minimumFlipsToMakeAOrBEqualToC.py",
+        "id": "1318",
+        "slug": "minimum-flips-to-make-a-or-b-equal-to-c",
+        "test_lines": [
+            "assert(Solution().minFlips(a=2, b=6, c=5) == 3)",
+            "assert(Solution().minFlips(a=4, b=2, c=7) == 1)",
+            "assert(Solution().minFlips(a=1, b=2, c=3) == 0)"
+        ]
+    },
+    "stone-game-vi": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1686_stoneGameVi.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1686_stoneGameVi.py",
+        "id": "1686",
+        "slug": "stone-game-vi",
+        "test_lines": [
+            "assert(Solution().stoneGameVI(aliceValues=[1, 3], bobValues=[2, 1]) == 1)",
+            "assert(Solution().stoneGameVI(aliceValues=[1, 2], bobValues=[3, 1]) == 0)",
+            "assert(Solution().stoneGameVI(aliceValues=[2, 4, 3], bobValues=[1, 6, 7]) == -1)"
+        ]
+    },
+    "remove-linked-list-elements": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0203_removeLinkedListElements.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0203_removeLinkedListElements.py",
+        "id": "0203",
+        "slug": "remove-linked-list-elements",
+        "test_lines": [
+            "assert(Solution().removeElements(head=[1, 2, 6, 3, 4, 5, 6], val=6) == [1, 2, 3, 4, 5])",
+            "assert(Solution().removeElements(head=[], val=1) == [])",
+            "assert(Solution().removeElements(head=[7, 7, 7, 7], val=7) == [])"
+        ]
+    },
+    "koko-eating-bananas": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0875_kokoEatingBananas.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0875_kokoEatingBananas.py",
+        "id": "0875",
+        "slug": "koko-eating-bananas",
+        "test_lines": [
+            "assert(Solution().minEatingSpeed(piles=[3, 6, 7, 11], h=8) == 4)",
+            "assert(Solution().minEatingSpeed(piles=[30, 11, 23, 4, 20], h=5) == 30)",
+            "assert(Solution().minEatingSpeed(piles=[30, 11, 23, 4, 20], h=6) == 23)"
+        ]
+    },
+    "fibonacci-number": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0509_fibonacciNumber.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0509_fibonacciNumber.py",
+        "id": "0509",
+        "slug": "fibonacci-number",
+        "test_lines": [
+            "assert(Solution().fib(n=2) == 1)",
+            "assert(Solution().fib(n=3) == 2)",
+            "assert(Solution().fib(n=4) == 3)"
+        ]
+    },
+    "restore-the-array-from-adjacent-pairs": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1743_restoreTheArrayFromAdjacentPairs.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1743_restoreTheArrayFromAdjacentPairs.py",
+        "id": "1743",
+        "slug": "restore-the-array-from-adjacent-pairs",
+        "test_lines": [
+            "assert(Solution().restoreArray(adjacentPairs=[[2, 1], [3, 4], [3, 2]]) == [1, 2, 3, 4])",
+            "assert(Solution().restoreArray(adjacentPairs=[[4, -2], [1, 4], [-3, 1]]) == [-2, 4, 1, -3])",
+            "assert(Solution().restoreArray(adjacentPairs=[[100000, -100000]]) == [100000, -100000])"
+        ]
+    },
+    "make-k-subarray-sums-equal": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2607_makeKSubarraySumsEqual.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2607_makeKSubarraySumsEqual.py",
+        "id": "2607",
+        "slug": "make-k-subarray-sums-equal",
+        "test_lines": [
+            "assert(Solution().makeSubKSumEqual(arr=[1, 4, 1, 3], k=2) == 1)",
+            "assert(Solution().makeSubKSumEqual(arr=[2, 5, 5, 7], k=3) == 5)"
+        ]
+    },
+    "adding-two-negabinary-numbers": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1073_addingTwoNegabinaryNumbers.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1073_addingTwoNegabinaryNumbers.py",
+        "id": "1073",
+        "slug": "adding-two-negabinary-numbers",
+        "test_lines": [
+            "assert(Solution().addNegabinary(arr1=[1, 1, 1, 1, 1], arr2=[1, 0, 1]) == [1, 0, 0, 0, 0])",
+            "assert(Solution().addNegabinary(arr1=[0], arr2=[0]) == [0])",
+            "assert(Solution().addNegabinary(arr1=[0], arr2=[1]) == [1])"
+        ]
+    },
+    "card-flipping-game": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0822_cardFlippingGame.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0822_cardFlippingGame.py",
+        "id": "0822",
+        "slug": "card-flipping-game",
+        "test_lines": [
+            "assert(Solution().flipgame(fronts=[1, 2, 4, 4, 7], backs=[1, 3, 4, 1, 3]) == 2)",
+            "assert(Solution().flipgame(fronts=[1], backs=[1]) == 0)"
+        ]
+    },
+    "check-if-one-string-swap-can-make-strings-equal": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1790_checkIfOneStringSwapCanMakeStringsEqual.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1790_checkIfOneStringSwapCanMakeStringsEqual.py",
+        "id": "1790",
+        "slug": "check-if-one-string-swap-can-make-strings-equal",
+        "test_lines": [
+            "assert(Solution().areAlmostEqual(s1=bank, s2=kanb) == True)",
+            "assert(Solution().areAlmostEqual(s1=attack, s2=defend) == False)",
+            "assert(Solution().areAlmostEqual(s1=kelb, s2=kelb) == True)"
+        ]
+    },
+    "node-with-highest-edge-score": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2374_nodeWithHighestEdgeScore.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2374_nodeWithHighestEdgeScore.py",
+        "id": "2374",
+        "slug": "node-with-highest-edge-score",
+        "test_lines": [
+            "assert(Solution().edgeScore(edges=[1, 0, 0, 0, 0, 7, 7, 5]) == 7)",
+            "assert(Solution().edgeScore(edges=[2, 0, 0, 2]) == 0)"
+        ]
+    },
+    "n-queens-ii": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0052_nQueensIi.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0052_nQueensIi.py",
+        "id": "0052",
+        "slug": "n-queens-ii",
+        "test_lines": [
+            "assert(Solution().totalNQueens(n=4) == 2)",
+            "assert(Solution().totalNQueens(n=1) == 1)"
+        ]
+    },
+    "find-all-lonely-numbers-in-the-array": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2150_findAllLonelyNumbersInTheArray.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2150_findAllLonelyNumbersInTheArray.py",
+        "id": "2150",
+        "slug": "find-all-lonely-numbers-in-the-array",
+        "test_lines": [
+            "assert(Solution().findLonely(nums=[10, 6, 5, 8]) == [10, 8])",
+            "assert(Solution().findLonely(nums=[1, 3, 5, 3]) == [1, 5])"
+        ]
+    },
+    "k-th-smallest-in-lexicographical-order": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0440_kThSmallestInLexicographicalOrder.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0440_kThSmallestInLexicographicalOrder.py",
+        "id": "0440",
+        "slug": "k-th-smallest-in-lexicographical-order",
+        "test_lines": [
+            "assert(Solution().findKthNumber(n=13, k=2) == 10)",
+            "assert(Solution().findKthNumber(n=1, k=1) == 1)"
+        ]
+    },
+    "sum-of-subarray-minimums": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0907_sumOfSubarrayMinimums.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0907_sumOfSubarrayMinimums.py",
+        "id": "0907",
+        "slug": "sum-of-subarray-minimums",
+        "test_lines": [
+            "assert(Solution().sumSubarrayMins(arr=[3, 1, 2, 4]) == 17)",
+            "assert(Solution().sumSubarrayMins(arr=[11, 81, 94, 43, 3]) == 444)"
+        ]
+    },
+    "reverse-subarray-to-maximize-array-value": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1330_reverseSubarrayToMaximizeArrayValue.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1330_reverseSubarrayToMaximizeArrayValue.py",
+        "id": "1330",
+        "slug": "reverse-subarray-to-maximize-array-value",
+        "test_lines": [
+            "assert(Solution().maxValueAfterReverse(nums=[2, 3, 1, 5, 4]) == 10)",
+            "assert(Solution().maxValueAfterReverse(nums=[2, 4, 9, 24, 2, 1, 10]) == 68)"
+        ]
+    },
+    "next-greater-element-i": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0496_nextGreaterElementI.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0496_nextGreaterElementI.py",
+        "id": "0496",
+        "slug": "next-greater-element-i",
+        "test_lines": [
+            "assert(Solution().nextGreaterElement(nums1=[4, 1, 2], nums2=[1, 3, 4, 2]) == [-1, 3, -1])",
+            "assert(Solution().nextGreaterElement(nums1=[2, 4], nums2=[1, 2, 3, 4]) == [3, -1])"
+        ]
+    },
+    "find-players-with-zero-or-one-losses": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2225_findPlayersWithZeroOrOneLosses.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2225_findPlayersWithZeroOrOneLosses.py",
+        "id": "2225",
+        "slug": "find-players-with-zero-or-one-losses",
+        "test_lines": [
+            "assert(Solution().findWinners(matches=[[1, 3], [2, 3], [3, 6], [5, 6], [5, 7], [4, 5], [4, 8], [4, 9], [10, 4], [10, 9]]) == [[1, 2, 10], [4, 5, 7, 8]])",
+            "assert(Solution().findWinners(matches=[[2, 3], [1, 3], [5, 4], [6, 4]]) == [[1, 2, 5, 6], []])"
+        ]
+    },
+    "calculate-money-in-leetcode-bank": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1716_calculateMoneyInLeetcodeBank.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1716_calculateMoneyInLeetcodeBank.py",
+        "id": "1716",
+        "slug": "calculate-money-in-leetcode-bank",
+        "test_lines": [
+            "assert(Solution().totalMoney(n=4) == 10)",
+            "assert(Solution().totalMoney(n=10) == 37)",
+            "assert(Solution().totalMoney(n=20) == 96)"
+        ]
+    },
+    "linked-list-cycle": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0141_linkedListCycle.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0141_linkedListCycle.py",
+        "id": "0141",
+        "slug": "linked-list-cycle",
+        "test_lines": [
+            "assert(Solution().hasCycle(head=[3, 2, 0, -4], pos=1) == True)",
+            "assert(Solution().hasCycle(head=[1, 2], pos=0) == True)",
+            "assert(Solution().hasCycle(head=[1], pos=-1) == False)"
+        ]
+    },
+    "n-th-tribonacci-number": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1137_nThTribonacciNumber.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1137_nThTribonacciNumber.py",
+        "id": "1137",
+        "slug": "n-th-tribonacci-number",
+        "test_lines": [
+            "assert(Solution().tribonacci(n=4) == 4)",
+            "assert(Solution().tribonacci(n=25) == 1389537)"
+        ]
+    },
+    "verifying-an-alien-dictionary": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0953_verifyingAnAlienDictionary.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0953_verifyingAnAlienDictionary.py",
+        "id": "0953",
+        "slug": "verifying-an-alien-dictionary",
+        "test_lines": [
+            "assert(Solution().isAlienSorted(words=['hello', 'leetcode'], order=hlabcdefgijkmnopqrstuvwxyz) == True)",
+            "assert(Solution().isAlienSorted(words=['word', 'world', 'row'], order=worldabcefghijkmnpqstuvxyz) == False)",
+            "assert(Solution().isAlienSorted(words=['apple', 'app'], order=abcdefghijklmnopqrstuvwxyz) == False)"
+        ]
+    },
+    "move-zeroes": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0283_moveZeroes.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0283_moveZeroes.py",
+        "id": "0283",
+        "slug": "move-zeroes",
+        "test_lines": [
+            "assert(Solution().moveZeroes(nums=[0, 1, 0, 3, 12]) == [1, 3, 12, 0, 0])",
+            "assert(Solution().moveZeroes(nums=[0]) == [0])"
+        ]
+    },
+    "can-place-flowers": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0605_canPlaceFlowers.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0605_canPlaceFlowers.py",
+        "id": "0605",
+        "slug": "can-place-flowers",
+        "test_lines": [
+            "assert(Solution().canPlaceFlowers(flowerbed=[1, 0, 0, 0, 1], n=1) == True)",
+            "assert(Solution().canPlaceFlowers(flowerbed=[1, 0, 0, 0, 1], n=2) == False)"
+        ]
+    },
+    "maximum-of-absolute-value-expression": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1131_maximumOfAbsoluteValueExpression.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1131_maximumOfAbsoluteValueExpression.py",
+        "id": "1131",
+        "slug": "maximum-of-absolute-value-expression",
+        "test_lines": [
+            "assert(Solution().maxAbsValExpr(arr1=[1, 2, 3, 4], arr2=[-1, 4, 5, 6]) == 13)",
+            "assert(Solution().maxAbsValExpr(arr1=[1, -2, -5, 0, 10], arr2=[0, -2, -1, -7, -4]) == 20)"
+        ]
+    },
+    "number-of-pairs-of-strings-with-concatenation-equal-to-target": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2023_numberOfPairsOfStringsWithConcatenationEqualToTarget.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2023_numberOfPairsOfStringsWithConcatenationEqualToTarget.py",
+        "id": "2023",
+        "slug": "number-of-pairs-of-strings-with-concatenation-equal-to-target",
+        "test_lines": [
+            "assert(Solution().numOfPairs(nums=['777', '7', '77', '77'], target=7777) == 4)",
+            "assert(Solution().numOfPairs(nums=['123', '4', '12', '34'], target=1234) == 2)",
+            "assert(Solution().numOfPairs(nums=['1', '1', '1'], target=11) == 6)"
+        ]
+    },
+    "closest-dessert-cost": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1774_closestDessertCost.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1774_closestDessertCost.py",
+        "id": "1774",
+        "slug": "closest-dessert-cost",
+        "test_lines": [
+            "assert(Solution().closestCost(baseCosts=[1, 7], toppingCosts=[3, 4], target=10) == 10)",
+            "assert(Solution().closestCost(baseCosts=[2, 3], toppingCosts=[4, 5, 100], target=18) == 17)",
+            "assert(Solution().closestCost(baseCosts=[3, 10], toppingCosts=[2, 5], target=9) == 8)"
+        ]
+    },
+    "scramble-string": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0087_scrambleString.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0087_scrambleString.py",
+        "id": "0087",
+        "slug": "scramble-string",
+        "test_lines": [
+            "assert(Solution().isScramble(s1=great, s2=rgeat) == True)",
+            "assert(Solution().isScramble(s1=abcde, s2=caebd) == False)",
+            "assert(Solution().isScramble(s1=a, s2=a) == True)"
+        ]
+    },
+    "minimum-time-to-complete-all-tasks": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2589_minimumTimeToCompleteAllTasks.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2589_minimumTimeToCompleteAllTasks.py",
+        "id": "2589",
+        "slug": "minimum-time-to-complete-all-tasks",
+        "test_lines": [
+            "assert(Solution().findMinimumTime(tasks=[[2, 3, 1], [4, 5, 1], [1, 5, 2]]) == 2)",
+            "assert(Solution().findMinimumTime(tasks=[[1, 3, 2], [2, 5, 3], [5, 6, 2]]) == 4)"
+        ]
+    },
+    "find-the-array-concatenation-value": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2562_findTheArrayConcatenationValue.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2562_findTheArrayConcatenationValue.py",
+        "id": "2562",
+        "slug": "find-the-array-concatenation-value",
+        "test_lines": [
+            "assert(Solution().findTheArrayConcVal(nums=[7, 52, 2, 4]) == 596)",
+            "assert(Solution().findTheArrayConcVal(nums=[5, 14, 13, 8, 12]) == 673)"
+        ]
+    },
+    "ways-to-split-array-into-good-subarrays": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2750_waysToSplitArrayIntoGoodSubarrays.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2750_waysToSplitArrayIntoGoodSubarrays.py",
+        "id": "2750",
+        "slug": "ways-to-split-array-into-good-subarrays",
+        "test_lines": [
+            "assert(Solution().numberOfGoodSubarraySplits(nums=[0, 1, 0, 0, 1]) == 3)",
+            "assert(Solution().numberOfGoodSubarraySplits(nums=[0, 1, 0]) == 1)"
+        ]
+    },
+    "find-positive-integer-solution-for-a-given-equation": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1237_findPositiveIntegerSolutionForAGivenEquation.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1237_findPositiveIntegerSolutionForAGivenEquation.py",
+        "id": "1237",
+        "slug": "find-positive-integer-solution-for-a-given-equation",
+        "test_lines": [
+            "assert(Solution().findSolution(function_id=1, z=5) == [[1, 4], [2, 3], [3, 2], [4, 1]])",
+            "assert(Solution().findSolution(function_id=2, z=5) == [[1, 5], [5, 1]])"
+        ]
+    },
+    "find-first-palindromic-string-in-the-array": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2108_findFirstPalindromicStringInTheArray.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2108_findFirstPalindromicStringInTheArray.py",
+        "id": "2108",
+        "slug": "find-first-palindromic-string-in-the-array",
+        "test_lines": [
+            "assert(Solution().firstPalindrome(words=['abc', 'car', 'ada', 'racecar', 'cool']) == ada)",
+            "assert(Solution().firstPalindrome(words=['notapalindrome', 'racecar']) == racecar)",
+            "assert(Solution().firstPalindrome(words=['def', 'ghi']) == )"
+        ]
+    },
+    "all-ancestors-of-a-node-in-a-directed-acyclic-graph": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2192_allAncestorsOfANodeInADirectedAcyclicGraph.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2192_allAncestorsOfANodeInADirectedAcyclicGraph.py",
+        "id": "2192",
+        "slug": "all-ancestors-of-a-node-in-a-directed-acyclic-graph",
+        "test_lines": [
+            "assert(Solution().getAncestors(n=8, edgeList=[[0, 3], [0, 4], [1, 3], [2, 4], [2, 7], [3, 5], [3, 6], [3, 7], [4, 6]]) == [[], [], [], [0, 1], [0, 2], [0, 1, 3], [0, 1, 2, 3, 4], [0, 1, 2, 3]])",
+            "assert(Solution().getAncestors(n=5, edgeList=[[0, 1], [0, 2], [0, 3], [0, 4], [1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]]) == [[], [0], [0, 1], [0, 1, 2], [0, 1, 2, 3]])"
+        ]
+    },
+    "unique-number-of-occurrences": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1207_uniqueNumberOfOccurrences.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1207_uniqueNumberOfOccurrences.py",
+        "id": "1207",
+        "slug": "unique-number-of-occurrences",
+        "test_lines": [
+            "assert(Solution().uniqueOccurrences(arr=[1, 2, 2, 1, 1, 3]) == True)",
+            "assert(Solution().uniqueOccurrences(arr=[1, 2]) == False)",
+            "assert(Solution().uniqueOccurrences(arr=[-3, 0, 1, -3, 1, 1, 1, -3, 10, 0]) == True)"
+        ]
+    },
+    "minimum-cost-to-split-an-array": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2547_minimumCostToSplitAnArray.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2547_minimumCostToSplitAnArray.py",
+        "id": "2547",
+        "slug": "minimum-cost-to-split-an-array",
+        "test_lines": [
+            "assert(Solution().minCost(nums=[1, 2, 1, 2, 1, 3, 3], k=2) == 8)",
+            "assert(Solution().minCost(nums=[1, 2, 1, 2, 1], k=2) == 6)",
+            "assert(Solution().minCost(nums=[1, 2, 1, 2, 1], k=5) == 10)"
+        ]
+    },
+    "ransom-note": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0383_ransomNote.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0383_ransomNote.py",
+        "id": "0383",
+        "slug": "ransom-note",
+        "test_lines": [
+            "assert(Solution().canConstruct(ransomNote=a, magazine=b) == False)",
+            "assert(Solution().canConstruct(ransomNote=aa, magazine=ab) == False)",
+            "assert(Solution().canConstruct(ransomNote=aa, magazine=aab) == True)"
+        ]
+    },
+    "largest-positive-integer-that-exists-with-its-negative": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2441_largestPositiveIntegerThatExistsWithItsNegative.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2441_largestPositiveIntegerThatExistsWithItsNegative.py",
+        "id": "2441",
+        "slug": "largest-positive-integer-that-exists-with-its-negative",
+        "test_lines": [
+            "assert(Solution().findMaxK(nums=[-1, 2, -3, 3]) == 3)",
+            "assert(Solution().findMaxK(nums=[-1, 10, 6, 7, -7, 1]) == 7)",
+            "assert(Solution().findMaxK(nums=[-10, 8, 6, 7, -2, -3]) == -1)"
+        ]
+    },
+    "fizz-buzz": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0412_fizzBuzz.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0412_fizzBuzz.py",
+        "id": "0412",
+        "slug": "fizz-buzz",
+        "test_lines": [
+            "assert(Solution().fizzBuzz(n=3) == ['1', '2', 'Fizz'])",
+            "assert(Solution().fizzBuzz(n=5) == ['1', '2', 'Fizz', '4', 'Buzz'])",
+            "assert(Solution().fizzBuzz(n=15) == ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8', 'Fizz', 'Buzz', '11', 'Fizz', '13', '14', 'FizzBuzz'])"
+        ]
+    },
+    "making-file-names-unique": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1487_makingFileNamesUnique.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1487_makingFileNamesUnique.py",
+        "id": "1487",
+        "slug": "making-file-names-unique",
+        "test_lines": [
+            "assert(Solution().getFolderNames(names=['pes', 'fifa', 'gta', 'pes(2019)']) == ['pes', 'fifa', 'gta', 'pes(2019)'])",
+            "assert(Solution().getFolderNames(names=['gta', 'gta(1)', 'gta', 'avalon']) == ['gta', 'gta(1)', 'gta(2)', 'avalon'])",
+            "assert(Solution().getFolderNames(names=['onepiece', 'onepiece(1)', 'onepiece(2)', 'onepiece(3)', 'onepiece']) == ['onepiece', 'onepiece(1)', 'onepiece(2)', 'onepiece(3)', 'onepiece(4)'])"
+        ]
+    },
+    "invalid-transactions": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1169_invalidTransactions.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1169_invalidTransactions.py",
+        "id": "1169",
+        "slug": "invalid-transactions",
+        "test_lines": [
+            "assert(Solution().invalidTransactions(transactions=['alice,20,800,mtv', 'alice,50,100,beijing']) == ['alice,20,800,mtv', 'alice,50,100,beijing'])",
+            "assert(Solution().invalidTransactions(transactions=['alice,20,800,mtv', 'alice,50,1200,mtv']) == ['alice,50,1200,mtv'])",
+            "assert(Solution().invalidTransactions(transactions=['alice,20,800,mtv', 'bob,50,1200,mtv']) == ['bob,50,1200,mtv'])"
+        ]
+    },
+    "length-of-the-longest-valid-substring": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2781_lengthOfTheLongestValidSubstring.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2781_lengthOfTheLongestValidSubstring.py",
+        "id": "2781",
+        "slug": "length-of-the-longest-valid-substring",
+        "test_lines": [
+            "assert(Solution().longestValidSubstring(word=cbaaaabc, forbidden=['aaa', 'cb']) == 4)",
+            "assert(Solution().longestValidSubstring(word=leetcode, forbidden=['de', 'le', 'e']) == 4)"
+        ]
+    },
+    "maximize-the-minimum-powered-city": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2528_maximizeTheMinimumPoweredCity.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2528_maximizeTheMinimumPoweredCity.py",
+        "id": "2528",
+        "slug": "maximize-the-minimum-powered-city",
+        "test_lines": [
+            "assert(Solution().maxPower(stations=[1, 2, 4, 5, 0], r=1, k=2) == 5)",
+            "assert(Solution().maxPower(stations=[4, 4, 4, 4], r=0, k=3) == 4)"
+        ]
+    },
+    "longest-well-performing-interval": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1124_longestWellPerformingInterval.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1124_longestWellPerformingInterval.py",
+        "id": "1124",
+        "slug": "longest-well-performing-interval",
+        "test_lines": [
+            "assert(Solution().longestWPI(hours=[9, 9, 6, 0, 6, 6, 9]) == 3)",
+            "assert(Solution().longestWPI(hours=[6, 6, 6]) == 0)"
+        ]
+    },
+    "minimize-the-total-price-of-the-trips": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2646_minimizeTheTotalPriceOfTheTrips.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2646_minimizeTheTotalPriceOfTheTrips.py",
+        "id": "2646",
+        "slug": "minimize-the-total-price-of-the-trips",
+        "test_lines": [
+            "assert(Solution().minimumTotalPrice(n=4, edges=[[0, 1], [1, 2], [1, 3]], price=[2, 2, 10, 6], trips=[[0, 3], [2, 1], [2, 3]]) == 23)",
+            "assert(Solution().minimumTotalPrice(n=2, edges=[[0, 1]], price=[2, 2], trips=[[0, 0]]) == 1)"
+        ]
+    },
+    "minimum-deletions-to-make-array-divisible": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2344_minimumDeletionsToMakeArrayDivisible.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2344_minimumDeletionsToMakeArrayDivisible.py",
+        "id": "2344",
+        "slug": "minimum-deletions-to-make-array-divisible",
+        "test_lines": [
+            "assert(Solution().minOperations(nums=[2, 3, 2, 4, 3], numsDivide=[9, 6, 9, 3, 15]) == 2)",
+            "assert(Solution().minOperations(nums=[4, 3, 6], numsDivide=[8, 2, 6, 10]) == -1)"
+        ]
+    },
+    "find-the-value-of-the-partition": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2740_findTheValueOfThePartition.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2740_findTheValueOfThePartition.py",
+        "id": "2740",
+        "slug": "find-the-value-of-the-partition",
+        "test_lines": [
+            "assert(Solution().findValueOfPartition(nums=[1, 3, 2, 4]) == 1)",
+            "assert(Solution().findValueOfPartition(nums=[100, 1, 10]) == 9)"
+        ]
+    },
+    "number-of-ways-to-split-a-string": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1573_numberOfWaysToSplitAString.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1573_numberOfWaysToSplitAString.py",
+        "id": "1573",
+        "slug": "number-of-ways-to-split-a-string",
+        "test_lines": [
+            "assert(Solution().numWays(s=10101) == 4)",
+            "assert(Solution().numWays(s=1001) == 0)",
+            "assert(Solution().numWays(s=0000) == 3)"
+        ]
+    },
+    "minimum-obstacle-removal-to-reach-corner": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2290_minimumObstacleRemovalToReachCorner.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2290_minimumObstacleRemovalToReachCorner.py",
+        "id": "2290",
+        "slug": "minimum-obstacle-removal-to-reach-corner",
+        "test_lines": [
+            "assert(Solution().minimumObstacles(grid=[[0, 1, 1], [1, 1, 0], [1, 1, 0]]) == 2)",
+            "assert(Solution().minimumObstacles(grid=[[0, 1, 0, 0, 0], [0, 1, 0, 1, 0], [0, 0, 0, 1, 0]]) == 0)"
+        ]
+    },
+    "number-of-ways-of-cutting-a-pizza": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1444_numberOfWaysOfCuttingAPizza.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1444_numberOfWaysOfCuttingAPizza.py",
+        "id": "1444",
+        "slug": "number-of-ways-of-cutting-a-pizza",
+        "test_lines": [
+            "assert(Solution().ways(pizza=['A..', 'AAA', '...'], k=3) == 3)",
+            "assert(Solution().ways(pizza=['A..', 'AA.', '...'], k=3) == 1)",
+            "assert(Solution().ways(pizza=['A..', 'A..', '...'], k=1) == 1)"
+        ]
+    },
+    "kth-largest-element-in-an-array": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0215_kthLargestElementInAnArray.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0215_kthLargestElementInAnArray.py",
+        "id": "0215",
+        "slug": "kth-largest-element-in-an-array",
+        "test_lines": [
+            "assert(Solution().findKthLargest(nums=[3, 2, 1, 5, 6, 4], k=2) == 5)",
+            "assert(Solution().findKthLargest(nums=[3, 2, 3, 1, 2, 4, 5, 5, 6], k=4) == 4)"
+        ]
+    },
+    "increasing-decreasing-string": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1370_increasingDecreasingString.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1370_increasingDecreasingString.py",
+        "id": "1370",
+        "slug": "increasing-decreasing-string",
+        "test_lines": [
+            "assert(Solution().sortString(s=aaaabbbbcccc) == abccbaabccba)",
+            "assert(Solution().sortString(s=rat) == art)"
+        ]
+    },
+    "sort-an-array": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0912_sortAnArray.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0912_sortAnArray.py",
+        "id": "0912",
+        "slug": "sort-an-array",
+        "test_lines": [
+            "assert(Solution().sortArray(nums=[5, 2, 3, 1]) == [1, 2, 3, 5])",
+            "assert(Solution().sortArray(nums=[5, 1, 1, 2, 0, 0]) == [0, 0, 1, 1, 2, 5])"
+        ]
+    },
+    "maximum-elegance-of-a-k-length-subsequence": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2813_maximumEleganceOfAKLengthSubsequence.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2813_maximumEleganceOfAKLengthSubsequence.py",
+        "id": "2813",
+        "slug": "maximum-elegance-of-a-k-length-subsequence",
+        "test_lines": [
+            "assert(Solution().findMaximumElegance(items=[[3, 2], [5, 1], [10, 1]], k=2) == 17)",
+            "assert(Solution().findMaximumElegance(items=[[3, 1], [3, 1], [2, 2], [5, 3]], k=3) == 19)",
+            "assert(Solution().findMaximumElegance(items=[[1, 1], [2, 1], [3, 1]], k=3) == 7)"
+        ]
+    },
+    "largest-number-after-digit-swaps-by-parity": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2231_largestNumberAfterDigitSwapsByParity.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2231_largestNumberAfterDigitSwapsByParity.py",
+        "id": "2231",
+        "slug": "largest-number-after-digit-swaps-by-parity",
+        "test_lines": [
+            "assert(Solution().largestInteger(num=1234) == 3412)",
+            "assert(Solution().largestInteger(num=65875) == 87655)"
+        ]
+    },
+    "make-array-zero-by-subtracting-equal-amounts": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2357_makeArrayZeroBySubtractingEqualAmounts.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2357_makeArrayZeroBySubtractingEqualAmounts.py",
+        "id": "2357",
+        "slug": "make-array-zero-by-subtracting-equal-amounts",
+        "test_lines": [
+            "assert(Solution().minimumOperations(nums=[1, 5, 0, 3, 5]) == 3)",
+            "assert(Solution().minimumOperations(nums=[0]) == 0)"
+        ]
+    },
+    "corporate-flight-bookings": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1109_corporateFlightBookings.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1109_corporateFlightBookings.py",
+        "id": "1109",
+        "slug": "corporate-flight-bookings",
+        "test_lines": [
+            "assert(Solution().corpFlightBookings(bookings=[[1, 2, 10], [2, 3, 20], [2, 5, 25]], n=5) == [10, 55, 45, 25, 25])",
+            "assert(Solution().corpFlightBookings(bookings=[[1, 2, 10], [2, 2, 15]], n=2) == [10, 25])"
+        ]
+    },
+    "replace-elements-in-an-array": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2295_replaceElementsInAnArray.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2295_replaceElementsInAnArray.py",
+        "id": "2295",
+        "slug": "replace-elements-in-an-array",
+        "test_lines": [
+            "assert(Solution().arrayChange(nums=[1, 2, 4, 6], operations=[[1, 3], [4, 7], [6, 1]]) == [3, 2, 7, 1])",
+            "assert(Solution().arrayChange(nums=[1, 2], operations=[[1, 3], [2, 1], [3, 2]]) == [2, 1])"
+        ]
+    },
+    "k-similar-strings": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0854_kSimilarStrings.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0854_kSimilarStrings.py",
+        "id": "0854",
+        "slug": "k-similar-strings",
+        "test_lines": [
+            "assert(Solution().kSimilarity(s1=ab, s2=ba) == 1)",
+            "assert(Solution().kSimilarity(s1=abc, s2=bca) == 2)"
+        ]
+    },
+    "binary-search": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0704_binarySearch.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0704_binarySearch.py",
+        "id": "0704",
+        "slug": "binary-search",
+        "test_lines": [
+            "assert(Solution().search(nums=[-1, 0, 3, 5, 9, 12], target=9) == 4)",
+            "assert(Solution().search(nums=[-1, 0, 3, 5, 9, 12], target=2) == -1)"
+        ]
+    },
+    "plus-one": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0066_plusOne.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0066_plusOne.py",
+        "id": "0066",
+        "slug": "plus-one",
+        "test_lines": [
+            "assert(Solution().plusOne(digits=[1, 2, 3]) == [1, 2, 4])",
+            "assert(Solution().plusOne(digits=[4, 3, 2, 1]) == [4, 3, 2, 2])",
+            "assert(Solution().plusOne(digits=[9]) == [1, 0])"
+        ]
+    },
+    "check-whether-two-strings-are-almost-equivalent": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2068_checkWhetherTwoStringsAreAlmostEquivalent.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2068_checkWhetherTwoStringsAreAlmostEquivalent.py",
+        "id": "2068",
+        "slug": "check-whether-two-strings-are-almost-equivalent",
+        "test_lines": [
+            "assert(Solution().checkAlmostEquivalent(word1=aaaa, word2=bccb) == False)",
+            "assert(Solution().checkAlmostEquivalent(word1=abcdeef, word2=abaaacc) == True)",
+            "assert(Solution().checkAlmostEquivalent(word1=cccddabba, word2=babababab) == True)"
+        ]
+    },
+    "watering-plants-ii": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2105_wateringPlantsIi.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2105_wateringPlantsIi.py",
+        "id": "2105",
+        "slug": "watering-plants-ii",
+        "test_lines": [
+            "assert(Solution().minimumRefill(plants=[2, 2, 3, 3], capacityA=5, capacityB=5) == 1)",
+            "assert(Solution().minimumRefill(plants=[2, 2, 3, 3], capacityA=3, capacityB=4) == 2)",
+            "assert(Solution().minimumRefill(plants=[5], capacityA=10, capacityB=8) == 0)"
+        ]
+    },
+    "minimum-index-sum-of-two-lists": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0599_minimumIndexSumOfTwoLists.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0599_minimumIndexSumOfTwoLists.py",
+        "id": "0599",
+        "slug": "minimum-index-sum-of-two-lists",
+        "test_lines": [
+            "assert(Solution().findRestaurant(list1=['Shogun', 'Tapioca Express', 'Burger King', 'KFC'], list2=['Piatti', 'The Grill at Torrey Pines', 'Hungry Hunter Steakhouse', 'Shogun']) == ['Shogun'])",
+            "assert(Solution().findRestaurant(list1=['Shogun', 'Tapioca Express', 'Burger King', 'KFC'], list2=['KFC', 'Shogun', 'Burger King']) == ['Shogun'])",
+            "assert(Solution().findRestaurant(list1=['happy', 'sad', 'good'], list2=['sad', 'happy', 'good']) == ['sad', 'happy'])"
+        ]
+    },
+    "sum-of-absolute-differences-in-a-sorted-array": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1685_sumOfAbsoluteDifferencesInASortedArray.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1685_sumOfAbsoluteDifferencesInASortedArray.py",
+        "id": "1685",
+        "slug": "sum-of-absolute-differences-in-a-sorted-array",
+        "test_lines": [
+            "assert(Solution().getSumAbsoluteDifferences(nums=[2, 3, 5]) == [4, 3, 5])",
+            "assert(Solution().getSumAbsoluteDifferences(nums=[1, 4, 6, 8, 10]) == [24, 15, 13, 15, 21])"
+        ]
+    },
+    "count-words-obtained-after-adding-a-letter": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2135_countWordsObtainedAfterAddingALetter.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2135_countWordsObtainedAfterAddingALetter.py",
+        "id": "2135",
+        "slug": "count-words-obtained-after-adding-a-letter",
+        "test_lines": [
+            "assert(Solution().wordCount(startWords=['ant', 'act', 'tack'], targetWords=['tack', 'act', 'acti']) == 2)",
+            "assert(Solution().wordCount(startWords=['ab', 'a'], targetWords=['abc', 'abcd']) == 1)"
+        ]
+    },
+    "average-value-of-even-numbers-that-are-divisible-by-three": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2455_averageValueOfEvenNumbersThatAreDivisibleByThree.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2455_averageValueOfEvenNumbersThatAreDivisibleByThree.py",
+        "id": "2455",
+        "slug": "average-value-of-even-numbers-that-are-divisible-by-three",
+        "test_lines": [
+            "assert(Solution().averageValue(nums=[1, 3, 6, 10, 12, 15]) == 9)",
+            "assert(Solution().averageValue(nums=[1, 2, 4, 7, 10]) == 0)"
+        ]
+    },
+    "pascals-triangle": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0118_pascalsTriangle.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0118_pascalsTriangle.py",
+        "id": "0118",
+        "slug": "pascals-triangle",
+        "test_lines": [
+            "assert(Solution().generate(numRows=5) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]])",
+            "assert(Solution().generate(numRows=1) == [[1]])"
+        ]
+    },
+    "find-the-string-with-lcp": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2573_findTheStringWithLcp.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2573_findTheStringWithLcp.py",
+        "id": "2573",
+        "slug": "find-the-string-with-lcp",
+        "test_lines": [
+            "assert(Solution().findTheString(lcp=[[4, 0, 2, 0], [0, 3, 0, 1], [2, 0, 2, 0], [0, 1, 0, 1]]) == abab)",
+            "assert(Solution().findTheString(lcp=[[4, 3, 2, 1], [3, 3, 2, 1], [2, 2, 2, 1], [1, 1, 1, 1]]) == aaaa)",
+            "assert(Solution().findTheString(lcp=[[4, 3, 2, 1], [3, 3, 2, 1], [2, 2, 2, 1], [1, 1, 1, 3]]) == )"
+        ]
+    },
+    "find-the-middle-index-in-array": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1991_findTheMiddleIndexInArray.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1991_findTheMiddleIndexInArray.py",
+        "id": "1991",
+        "slug": "find-the-middle-index-in-array",
+        "test_lines": [
+            "assert(Solution().findMiddleIndex(nums=[2, 3, -1, 8, 4]) == 3)",
+            "assert(Solution().findMiddleIndex(nums=[1, -1, 4]) == 2)",
+            "assert(Solution().findMiddleIndex(nums=[2, 5]) == -1)"
+        ]
+    },
+    "find-all-possible-recipes-from-given-supplies": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2115_findAllPossibleRecipesFromGivenSupplies.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2115_findAllPossibleRecipesFromGivenSupplies.py",
+        "id": "2115",
+        "slug": "find-all-possible-recipes-from-given-supplies",
+        "test_lines": [
+            "assert(Solution().findAllRecipes(recipes=['bread'], ingredients=[['yeast', 'flour']], supplies=['yeast', 'flour', 'corn']) == ['bread'])",
+            "assert(Solution().findAllRecipes(recipes=['bread', 'sandwich'], ingredients=[['yeast', 'flour'], ['bread', 'meat']], supplies=['yeast', 'flour', 'meat']) == ['bread', 'sandwich'])",
+            "assert(Solution().findAllRecipes(recipes=['bread', 'sandwich', 'burger'], ingredients=[['yeast', 'flour'], ['bread', 'meat'], ['sandwich', 'meat', 'bread']], supplies=['yeast', 'flour', 'meat']) == ['bread', 'sandwich', 'burger'])"
+        ]
+    },
+    "lexicographical-numbers": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0386_lexicographicalNumbers.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0386_lexicographicalNumbers.py",
+        "id": "0386",
+        "slug": "lexicographical-numbers",
+        "test_lines": [
+            "assert(Solution().lexicalOrder(n=13) == [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9])",
+            "assert(Solution().lexicalOrder(n=2) == [1, 2])"
+        ]
+    },
+    "partition-array-according-to-given-pivot": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2161_partitionArrayAccordingToGivenPivot.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2161_partitionArrayAccordingToGivenPivot.py",
+        "id": "2161",
+        "slug": "partition-array-according-to-given-pivot",
+        "test_lines": [
+            "assert(Solution().pivotArray(nums=[9, 12, 5, 10, 14, 3, 10], pivot=10) == [9, 5, 3, 10, 10, 12, 14])",
+            "assert(Solution().pivotArray(nums=[-3, 4, 3, 2], pivot=2) == [-3, 2, 4, 3])"
+        ]
+    },
+    "longest-word-in-dictionary-through-deleting": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0524_longestWordInDictionaryThroughDeleting.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0524_longestWordInDictionaryThroughDeleting.py",
+        "id": "0524",
+        "slug": "longest-word-in-dictionary-through-deleting",
+        "test_lines": [
+            "assert(Solution().findLongestWord(s=abpcplea, dictionary=['ale', 'apple', 'monkey', 'plea']) == apple)",
+            "assert(Solution().findLongestWord(s=abpcplea, dictionary=['a', 'b', 'c']) == a)"
+        ]
+    },
+    "number-of-ways-to-split-array": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2270_numberOfWaysToSplitArray.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2270_numberOfWaysToSplitArray.py",
+        "id": "2270",
+        "slug": "number-of-ways-to-split-array",
+        "test_lines": [
+            "assert(Solution().waysToSplitArray(nums=[10, 4, -8, 7]) == 2)",
+            "assert(Solution().waysToSplitArray(nums=[2, 3, 1, 0]) == 2)"
+        ]
+    },
+    "best-time-to-buy-and-sell-stock-with-cooldown": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0309_bestTimeToBuyAndSellStockWithCooldown.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0309_bestTimeToBuyAndSellStockWithCooldown.py",
+        "id": "0309",
+        "slug": "best-time-to-buy-and-sell-stock-with-cooldown",
+        "test_lines": [
+            "assert(Solution().maxProfit(prices=[1, 2, 3, 0, 2]) == 3)",
+            "assert(Solution().maxProfit(prices=[1]) == 0)"
+        ]
+    },
+    "arithmetic-slices-ii-subsequence": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0446_arithmeticSlicesIiSubsequence.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0446_arithmeticSlicesIiSubsequence.py",
+        "id": "0446",
+        "slug": "arithmetic-slices-ii-subsequence",
+        "test_lines": [
+            "assert(Solution().numberOfArithmeticSlices(nums=[2, 4, 6, 8, 10]) == 7)",
+            "assert(Solution().numberOfArithmeticSlices(nums=[7, 7, 7, 7, 7]) == 16)"
+        ]
+    },
+    "decode-the-slanted-ciphertext": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2075_decodeTheSlantedCiphertext.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2075_decodeTheSlantedCiphertext.py",
+        "id": "2075",
+        "slug": "decode-the-slanted-ciphertext",
+        "test_lines": [
+            "assert(Solution().decodeCiphertext(encodedText=ch   ie   pr, rows=3) == cipher)",
+            "assert(Solution().decodeCiphertext(encodedText=iveo    eed   l te   olc, rows=4) == i love leetcode)",
+            "assert(Solution().decodeCiphertext(encodedText=coding, rows=1) == coding)"
+        ]
+    },
+    "add-edges-to-make-degrees-of-all-nodes-even": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2508_addEdgesToMakeDegreesOfAllNodesEven.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2508_addEdgesToMakeDegreesOfAllNodesEven.py",
+        "id": "2508",
+        "slug": "add-edges-to-make-degrees-of-all-nodes-even",
+        "test_lines": [
+            "assert(Solution().isPossible(n=5, edges=[[1, 2], [2, 3], [3, 4], [4, 2], [1, 4], [2, 5]]) == True)",
+            "assert(Solution().isPossible(n=4, edges=[[1, 2], [3, 4]]) == True)",
+            "assert(Solution().isPossible(n=4, edges=[[1, 2], [1, 3], [1, 4]]) == False)"
+        ]
+    },
+    "string-compression-ii": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1531_stringCompressionIi.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1531_stringCompressionIi.py",
+        "id": "1531",
+        "slug": "string-compression-ii",
+        "test_lines": [
+            "assert(Solution().getLengthOfOptimalCompression(s=aaabcccd, k=2) == 4)",
+            "assert(Solution().getLengthOfOptimalCompression(s=aabbaa, k=2) == 2)",
+            "assert(Solution().getLengthOfOptimalCompression(s=aaaaaaaaaaa, k=0) == 3)"
+        ]
+    },
+    "best-time-to-buy-and-sell-stock-ii": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0122_bestTimeToBuyAndSellStockIi.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0122_bestTimeToBuyAndSellStockIi.py",
+        "id": "0122",
+        "slug": "best-time-to-buy-and-sell-stock-ii",
+        "test_lines": [
+            "assert(Solution().maxProfit(prices=[7, 1, 5, 3, 6, 4]) == 7)",
+            "assert(Solution().maxProfit(prices=[1, 2, 3, 4, 5]) == 4)",
+            "assert(Solution().maxProfit(prices=[7, 6, 4, 3, 1]) == 0)"
+        ]
+    },
+    "largest-number-after-mutating-substring": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1946_largestNumberAfterMutatingSubstring.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1946_largestNumberAfterMutatingSubstring.py",
+        "id": "1946",
+        "slug": "largest-number-after-mutating-substring",
+        "test_lines": [
+            "assert(Solution().maximumNumber(num=132, change=[9, 8, 5, 0, 3, 6, 4, 2, 6, 8]) == 832)",
+            "assert(Solution().maximumNumber(num=021, change=[9, 4, 3, 5, 7, 2, 1, 9, 0, 6]) == 934)",
+            "assert(Solution().maximumNumber(num=5, change=[1, 4, 7, 5, 3, 2, 5, 6, 9, 4]) == 5)"
+        ]
+    },
+    "plates-between-candles": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2055_platesBetweenCandles.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2055_platesBetweenCandles.py",
+        "id": "2055",
+        "slug": "plates-between-candles",
+        "test_lines": [
+            "assert(Solution().platesBetweenCandles(s=**|**|***|, queries=[[2, 5], [5, 9]]) == [2, 3])",
+            "assert(Solution().platesBetweenCandles(s=***|**|*****|**||**|*, queries=[[1, 17], [4, 5], [14, 17], [5, 11], [15, 16]]) == [9, 0, 0, 0, 0])"
+        ]
+    },
+    "maximum-performance-of-a-team": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1383_maximumPerformanceOfATeam.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1383_maximumPerformanceOfATeam.py",
+        "id": "1383",
+        "slug": "maximum-performance-of-a-team",
+        "test_lines": [
+            "assert(Solution().maxPerformance(n=6, speed=[2, 10, 3, 1, 5, 8], efficiency=[5, 4, 3, 9, 7, 2], k=2) == 60)",
+            "assert(Solution().maxPerformance(n=6, speed=[2, 10, 3, 1, 5, 8], efficiency=[5, 4, 3, 9, 7, 2], k=3) == 68)",
+            "assert(Solution().maxPerformance(n=6, speed=[2, 10, 3, 1, 5, 8], efficiency=[5, 4, 3, 9, 7, 2], k=4) == 72)"
+        ]
+    },
+    "max-points-on-a-line": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0149_maxPointsOnALine.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0149_maxPointsOnALine.py",
+        "id": "0149",
+        "slug": "max-points-on-a-line",
+        "test_lines": [
+            "assert(Solution().maxPoints(points=[[1, 1], [2, 2], [3, 3]]) == 3)",
+            "assert(Solution().maxPoints(points=[[1, 1], [3, 2], [5, 3], [4, 1], [2, 3], [1, 4]]) == 4)"
+        ]
+    },
+    "x-of-a-kind-in-a-deck-of-cards": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0914_xOfAKindInADeckOfCards.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0914_xOfAKindInADeckOfCards.py",
+        "id": "0914",
+        "slug": "x-of-a-kind-in-a-deck-of-cards",
+        "test_lines": [
+            "assert(Solution().hasGroupsSizeX(deck=[1, 2, 3, 4, 4, 3, 2, 1]) == True)",
+            "assert(Solution().hasGroupsSizeX(deck=[1, 1, 1, 2, 2, 2, 3, 3]) == False)"
+        ]
+    },
+    "count-equal-and-divisible-pairs-in-an-array": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2176_countEqualAndDivisiblePairsInAnArray.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2176_countEqualAndDivisiblePairsInAnArray.py",
+        "id": "2176",
+        "slug": "count-equal-and-divisible-pairs-in-an-array",
+        "test_lines": [
+            "assert(Solution().countPairs(nums=[3, 1, 2, 2, 2, 1, 3], k=2) == 4)",
+            "assert(Solution().countPairs(nums=[1, 2, 3, 4], k=1) == 0)"
+        ]
+    },
+    "minimum-cost-to-cut-a-stick": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1547_minimumCostToCutAStick.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1547_minimumCostToCutAStick.py",
+        "id": "1547",
+        "slug": "minimum-cost-to-cut-a-stick",
+        "test_lines": [
+            "assert(Solution().minCost(n=7, cuts=[1, 3, 4, 5]) == 16)",
+            "assert(Solution().minCost(n=9, cuts=[5, 6, 1, 4, 2]) == 22)"
+        ]
+    },
+    "number-complement": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0476_numberComplement.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0476_numberComplement.py",
+        "id": "0476",
+        "slug": "number-complement",
+        "test_lines": [
+            "assert(Solution().findComplement(num=5) == 2)",
+            "assert(Solution().findComplement(num=1) == 0)"
+        ]
+    },
+    "check-if-point-is-reachable": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2543_checkIfPointIsReachable.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2543_checkIfPointIsReachable.py",
+        "id": "2543",
+        "slug": "check-if-point-is-reachable",
+        "test_lines": [
+            "assert(Solution().isReachable(targetX=6, targetY=9) == False)",
+            "assert(Solution().isReachable(targetX=4, targetY=7) == True)"
+        ]
+    },
+    "rearrange-words-in-a-sentence": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1451_rearrangeWordsInASentence.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1451_rearrangeWordsInASentence.py",
+        "id": "1451",
+        "slug": "rearrange-words-in-a-sentence",
+        "test_lines": [
+            "assert(Solution().arrangeWords(text=Leetcode is cool) == Is cool leetcode)",
+            "assert(Solution().arrangeWords(text=Keep calm and code on) == On and keep calm code)",
+            "assert(Solution().arrangeWords(text=To be or not to be) == To be or to be not)"
+        ]
+    },
+    "count-the-repetitions": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0466_countTheRepetitions.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0466_countTheRepetitions.py",
+        "id": "0466",
+        "slug": "count-the-repetitions",
+        "test_lines": [
+            "assert(Solution().getMaxRepetitions(s1=acb, n1=4, s2=ab, n2=2) == 2)",
+            "assert(Solution().getMaxRepetitions(s1=acb, n1=1, s2=acb, n2=1) == 1)"
+        ]
+    },
+    "partition-array-into-three-parts-with-equal-sum": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1013_partitionArrayIntoThreePartsWithEqualSum.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1013_partitionArrayIntoThreePartsWithEqualSum.py",
+        "id": "1013",
+        "slug": "partition-array-into-three-parts-with-equal-sum",
+        "test_lines": [
+            "assert(Solution().canThreePartsEqualSum(arr=[0, 2, 1, -6, 6, -7, 9, 1, 2, 0, 1]) == True)",
+            "assert(Solution().canThreePartsEqualSum(arr=[0, 2, 1, -6, 6, 7, 9, -1, 2, 0, 1]) == False)",
+            "assert(Solution().canThreePartsEqualSum(arr=[3, 3, 6, 5, -2, 2, 5, 1, -9, 4]) == True)"
+        ]
+    },
+    "row-with-maximum-ones": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2643_rowWithMaximumOnes.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2643_rowWithMaximumOnes.py",
+        "id": "2643",
+        "slug": "row-with-maximum-ones",
+        "test_lines": [
+            "assert(Solution().rowAndMaximumOnes(mat=[[0, 1], [1, 0]]) == [0, 1])",
+            "assert(Solution().rowAndMaximumOnes(mat=[[0, 0, 0], [0, 1, 1]]) == [1, 2])",
+            "assert(Solution().rowAndMaximumOnes(mat=[[0, 0], [1, 1], [0, 0]]) == [1, 2])"
+        ]
+    },
+    "longest-happy-prefix": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1392_longestHappyPrefix.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1392_longestHappyPrefix.py",
+        "id": "1392",
+        "slug": "longest-happy-prefix",
+        "test_lines": [
+            "assert(Solution().longestPrefix(s=level) == l)",
+            "assert(Solution().longestPrefix(s=ababab) == abab)"
+        ]
+    },
+    "last-moment-before-all-ants-fall-out-of-a-plank": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1503_lastMomentBeforeAllAntsFallOutOfAPlank.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1503_lastMomentBeforeAllAntsFallOutOfAPlank.py",
+        "id": "1503",
+        "slug": "last-moment-before-all-ants-fall-out-of-a-plank",
+        "test_lines": [
+            "assert(Solution().getLastMoment(n=4, left=[4, 3], right=[0, 1]) == 4)",
+            "assert(Solution().getLastMoment(n=7, left=[], right=[0, 1, 2, 3, 4, 5, 6, 7]) == 7)",
+            "assert(Solution().getLastMoment(n=7, left=[0, 1, 2, 3, 4, 5, 6, 7], right=[]) == 7)"
+        ]
+    },
+    "palindrome-partitioning-iii": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1278_palindromePartitioningIii.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1278_palindromePartitioningIii.py",
+        "id": "1278",
+        "slug": "palindrome-partitioning-iii",
+        "test_lines": [
+            "assert(Solution().palindromePartition(s=abc, k=2) == 1)",
+            "assert(Solution().palindromePartition(s=aabbc, k=3) == 0)",
+            "assert(Solution().palindromePartition(s=leetcode, k=8) == 0)"
+        ]
+    },
+    "minimum-total-cost-to-make-arrays-unequal": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2499_minimumTotalCostToMakeArraysUnequal.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2499_minimumTotalCostToMakeArraysUnequal.py",
+        "id": "2499",
+        "slug": "minimum-total-cost-to-make-arrays-unequal",
+        "test_lines": [
+            "assert(Solution().minimumTotalCost(nums1=[1, 2, 3, 4, 5], nums2=[1, 2, 3, 4, 5]) == 10)",
+            "assert(Solution().minimumTotalCost(nums1=[2, 2, 2, 1, 3], nums2=[1, 2, 2, 3, 3]) == 10)",
+            "assert(Solution().minimumTotalCost(nums1=[1, 2, 2], nums2=[1, 2, 2]) == -1)"
+        ]
+    },
+    "neighboring-bitwise-xor": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2683_neighboringBitwiseXor.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2683_neighboringBitwiseXor.py",
+        "id": "2683",
+        "slug": "neighboring-bitwise-xor",
+        "test_lines": [
+            "assert(Solution().doesValidArrayExist(derived=[1, 1, 0]) == True)",
+            "assert(Solution().doesValidArrayExist(derived=[1, 1]) == True)",
+            "assert(Solution().doesValidArrayExist(derived=[1, 0]) == False)"
+        ]
+    },
+    "check-if-string-is-transformable-with-substring-sort-operations": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1585_checkIfStringIsTransformableWithSubstringSortOperations.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1585_checkIfStringIsTransformableWithSubstringSortOperations.py",
+        "id": "1585",
+        "slug": "check-if-string-is-transformable-with-substring-sort-operations",
+        "test_lines": [
+            "assert(Solution().isTransformable(s=84532, t=34852) == True)",
+            "assert(Solution().isTransformable(s=34521, t=23415) == True)",
+            "assert(Solution().isTransformable(s=12345, t=12435) == False)"
+        ]
+    },
+    "valid-permutations-for-di-sequence": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0903_validPermutationsForDiSequence.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0903_validPermutationsForDiSequence.py",
+        "id": "0903",
+        "slug": "valid-permutations-for-di-sequence",
+        "test_lines": [
+            "assert(Solution().numPermsDISequence(s=DID) == 5)",
+            "assert(Solution().numPermsDISequence(s=D) == 1)"
+        ]
+    },
+    "maximum-number-of-consecutive-values-you-can-make": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1798_maximumNumberOfConsecutiveValuesYouCanMake.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1798_maximumNumberOfConsecutiveValuesYouCanMake.py",
+        "id": "1798",
+        "slug": "maximum-number-of-consecutive-values-you-can-make",
+        "test_lines": [
+            "assert(Solution().getMaximumConsecutive(coins=[1, 3]) == 2)",
+            "assert(Solution().getMaximumConsecutive(coins=[1, 1, 1, 4]) == 8)",
+            "assert(Solution().getMaximumConsecutive(coins=[1, 4, 10, 3, 1]) == 20)"
+        ]
+    },
+    "find-kth-bit-in-nth-binary-string": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1545_findKthBitInNthBinaryString.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1545_findKthBitInNthBinaryString.py",
+        "id": "1545",
+        "slug": "find-kth-bit-in-nth-binary-string",
+        "test_lines": [
+            "assert(Solution().findKthBit(n=3, k=1) == 0)",
+            "assert(Solution().findKthBit(n=4, k=11) == 1)"
+        ]
+    },
+    "count-subtrees-with-max-distance-between-cities": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1617_countSubtreesWithMaxDistanceBetweenCities.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1617_countSubtreesWithMaxDistanceBetweenCities.py",
+        "id": "1617",
+        "slug": "count-subtrees-with-max-distance-between-cities",
+        "test_lines": [
+            "assert(Solution().countSubgraphsForEachDiameter(n=4, edges=[[1, 2], [2, 3], [2, 4]]) == [3, 4, 0])",
+            "assert(Solution().countSubgraphsForEachDiameter(n=2, edges=[[1, 2]]) == [1])",
+            "assert(Solution().countSubgraphsForEachDiameter(n=3, edges=[[1, 2], [2, 3]]) == [2, 1])"
+        ]
+    },
+    "sliding-puzzle": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0773_slidingPuzzle.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0773_slidingPuzzle.py",
+        "id": "0773",
+        "slug": "sliding-puzzle",
+        "test_lines": [
+            "assert(Solution().slidingPuzzle(board=[[1, 2, 3], [4, 0, 5]]) == 1)",
+            "assert(Solution().slidingPuzzle(board=[[1, 2, 3], [5, 4, 0]]) == -1)",
+            "assert(Solution().slidingPuzzle(board=[[4, 1, 2], [5, 0, 3]]) == 5)"
+        ]
+    },
+    "find-words-that-can-be-formed-by-characters": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1160_findWordsThatCanBeFormedByCharacters.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1160_findWordsThatCanBeFormedByCharacters.py",
+        "id": "1160",
+        "slug": "find-words-that-can-be-formed-by-characters",
+        "test_lines": [
+            "assert(Solution().countCharacters(words=['cat', 'bt', 'hat', 'tree'], chars=atach) == 6)",
+            "assert(Solution().countCharacters(words=['hello', 'world', 'leetcode'], chars=welldonehoneyr) == 10)"
+        ]
+    },
+    "minimum-speed-to-arrive-on-time": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1870_minimumSpeedToArriveOnTime.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1870_minimumSpeedToArriveOnTime.py",
+        "id": "1870",
+        "slug": "minimum-speed-to-arrive-on-time",
+        "test_lines": [
+            "assert(Solution().minSpeedOnTime(dist=[1, 3, 2], hour=6) == 1)",
+            "assert(Solution().minSpeedOnTime(dist=[1, 3, 2], hour=2.7) == 3)",
+            "assert(Solution().minSpeedOnTime(dist=[1, 3, 2], hour=1.9) == -1)"
+        ]
+    },
+    "restore-the-array": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1416_restoreTheArray.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1416_restoreTheArray.py",
+        "id": "1416",
+        "slug": "restore-the-array",
+        "test_lines": [
+            "assert(Solution().numberOfArrays(s=1000, k=10000) == 1)",
+            "assert(Solution().numberOfArrays(s=1000, k=10) == 0)",
+            "assert(Solution().numberOfArrays(s=1317, k=2000) == 8)"
+        ]
+    },
+    "excel-sheet-column-title": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0168_excelSheetColumnTitle.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0168_excelSheetColumnTitle.py",
+        "id": "0168",
+        "slug": "excel-sheet-column-title",
+        "test_lines": [
+            "assert(Solution().convertToTitle(columnNumber=1) == A)",
+            "assert(Solution().convertToTitle(columnNumber=28) == AB)",
+            "assert(Solution().convertToTitle(columnNumber=701) == ZY)"
+        ]
+    },
+    "self-dividing-numbers": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0728_selfDividingNumbers.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0728_selfDividingNumbers.py",
+        "id": "0728",
+        "slug": "self-dividing-numbers",
+        "test_lines": [
+            "assert(Solution().selfDividingNumbers(left=1, right=22) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22])",
+            "assert(Solution().selfDividingNumbers(left=47, right=85) == [48, 55, 66, 77])"
+        ]
+    },
+    "frog-position-after-t-seconds": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1377_frogPositionAfterTSeconds.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1377_frogPositionAfterTSeconds.py",
+        "id": "1377",
+        "slug": "frog-position-after-t-seconds",
+        "test_lines": [
+            "assert(Solution().frogPosition(n=7, edges=[[1, 2], [1, 3], [1, 7], [2, 4], [2, 6], [3, 5]], t=2, target=4) == 0.16666666666666666)",
+            "assert(Solution().frogPosition(n=7, edges=[[1, 2], [1, 3], [1, 7], [2, 4], [2, 6], [3, 5]], t=1, target=7) == 0.3333333333333333)"
+        ]
+    },
+    "merge-k-sorted-lists": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0023_mergeKSortedLists.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0023_mergeKSortedLists.py",
+        "id": "0023",
+        "slug": "merge-k-sorted-lists",
+        "test_lines": [
+            "assert(Solution().mergeKLists(lists=[[1, 4, 5], [1, 3, 4], [2, 6]]) == [1, 1, 2, 3, 4, 4, 5, 6])",
+            "assert(Solution().mergeKLists(lists=[]) == [])",
+            "assert(Solution().mergeKLists(lists=[[]]) == [])"
+        ]
+    },
+    "maximize-number-of-nice-divisors": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1808_maximizeNumberOfNiceDivisors.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1808_maximizeNumberOfNiceDivisors.py",
+        "id": "1808",
+        "slug": "maximize-number-of-nice-divisors",
+        "test_lines": [
+            "assert(Solution().maxNiceDivisors(primeFactors=5) == 6)",
+            "assert(Solution().maxNiceDivisors(primeFactors=8) == 18)"
+        ]
+    },
+    "palindrome-pairs": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0336_palindromePairs.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0336_palindromePairs.py",
+        "id": "0336",
+        "slug": "palindrome-pairs",
+        "test_lines": [
+            "assert(Solution().palindromePairs(words=['abcd', 'dcba', 'lls', 's', 'sssll']) == [[0, 1], [1, 0], [3, 2], [2, 4]])",
+            "assert(Solution().palindromePairs(words=['bat', 'tab', 'cat']) == [[0, 1], [1, 0]])",
+            "assert(Solution().palindromePairs(words=['a', '']) == [[0, 1], [1, 0]])"
+        ]
+    },
+    "convert-integer-to-the-sum-of-two-no-zero-integers": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1317_convertIntegerToTheSumOfTwoNoZeroIntegers.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1317_convertIntegerToTheSumOfTwoNoZeroIntegers.py",
+        "id": "1317",
+        "slug": "convert-integer-to-the-sum-of-two-no-zero-integers",
+        "test_lines": [
+            "assert(Solution().getNoZeroIntegers(n=2) == [1, 1])",
+            "assert(Solution().getNoZeroIntegers(n=11) == [2, 9])"
+        ]
+    },
+    "find-closest-node-to-given-two-nodes": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2359_findClosestNodeToGivenTwoNodes.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2359_findClosestNodeToGivenTwoNodes.py",
+        "id": "2359",
+        "slug": "find-closest-node-to-given-two-nodes",
+        "test_lines": [
+            "assert(Solution().closestMeetingNode(edges=[2, 2, 3, -1], node1=0, node2=1) == 2)",
+            "assert(Solution().closestMeetingNode(edges=[1, 2, -1], node1=0, node2=2) == 2)"
+        ]
+    },
+    "next-greater-element-iv": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2454_nextGreaterElementIv.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2454_nextGreaterElementIv.py",
+        "id": "2454",
+        "slug": "next-greater-element-iv",
+        "test_lines": [
+            "assert(Solution().secondGreaterElement(nums=[2, 4, 0, 9, 6]) == [9, 6, 6, -1, -1])",
+            "assert(Solution().secondGreaterElement(nums=[3, 3]) == [-1, -1])"
+        ]
+    },
+    "rank-transform-of-an-array": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1331_rankTransformOfAnArray.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1331_rankTransformOfAnArray.py",
+        "id": "1331",
+        "slug": "rank-transform-of-an-array",
+        "test_lines": [
+            "assert(Solution().arrayRankTransform(arr=[40, 10, 20, 30]) == [4, 1, 2, 3])",
+            "assert(Solution().arrayRankTransform(arr=[100, 100, 100]) == [1, 1, 1])",
+            "assert(Solution().arrayRankTransform(arr=[37, 12, 28, 9, 100, 56, 80, 5, 12]) == [5, 3, 4, 2, 8, 6, 7, 1, 3])"
+        ]
+    },
+    "maximum-gap": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0164_maximumGap.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0164_maximumGap.py",
+        "id": "0164",
+        "slug": "maximum-gap",
+        "test_lines": [
+            "assert(Solution().maximumGap(nums=[3, 6, 9, 1]) == 3)",
+            "assert(Solution().maximumGap(nums=[10]) == 0)"
+        ]
+    },
+    "minimum-number-of-steps-to-make-two-strings-anagram-ii": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2186_minimumNumberOfStepsToMakeTwoStringsAnagramIi.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2186_minimumNumberOfStepsToMakeTwoStringsAnagramIi.py",
+        "id": "2186",
+        "slug": "minimum-number-of-steps-to-make-two-strings-anagram-ii",
+        "test_lines": [
+            "assert(Solution().minSteps(s=**lee**tco**de**, t=co**a**t**s**) == 7)",
+            "assert(Solution().minSteps(s=night, t=thing) == 0)"
+        ]
+    },
+    "check-if-two-string-arrays-are-equivalent": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1662_checkIfTwoStringArraysAreEquivalent.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1662_checkIfTwoStringArraysAreEquivalent.py",
+        "id": "1662",
+        "slug": "check-if-two-string-arrays-are-equivalent",
+        "test_lines": [
+            "assert(Solution().arrayStringsAreEqual(word1=['ab', 'c'], word2=['a', 'bc']) == True)",
+            "assert(Solution().arrayStringsAreEqual(word1=['a', 'cb'], word2=['ab', 'c']) == False)",
+            "assert(Solution().arrayStringsAreEqual(word1=['abc', 'd', 'defg'], word2=['abcddefg']) == True)"
+        ]
+    },
+    "reveal-cards-in-increasing-order": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0950_revealCardsInIncreasingOrder.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0950_revealCardsInIncreasingOrder.py",
+        "id": "0950",
+        "slug": "reveal-cards-in-increasing-order",
+        "test_lines": [
+            "assert(Solution().deckRevealedIncreasing(deck=[17, 13, 11, 2, 3, 5, 7]) == [2, 13, 3, 11, 5, 17, 7])",
+            "assert(Solution().deckRevealedIncreasing(deck=[1, 1000]) == [1, 1000])"
+        ]
+    },
+    "find-peak-element": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0162_findPeakElement.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0162_findPeakElement.py",
+        "id": "0162",
+        "slug": "find-peak-element",
+        "test_lines": [
+            "assert(Solution().findPeakElement(nums=[1, 2, 3, 1]) == 2)",
+            "assert(Solution().findPeakElement(nums=[1, 2, 1, 3, 5, 6, 4]) == 5)"
+        ]
+    },
+    "how-many-numbers-are-smaller-than-the-current-number": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1365_howManyNumbersAreSmallerThanTheCurrentNumber.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1365_howManyNumbersAreSmallerThanTheCurrentNumber.py",
+        "id": "1365",
+        "slug": "how-many-numbers-are-smaller-than-the-current-number",
+        "test_lines": [
+            "assert(Solution().smallerNumbersThanCurrent(nums=[8, 1, 2, 2, 3]) == [4, 0, 1, 1, 3])",
+            "assert(Solution().smallerNumbersThanCurrent(nums=[6, 5, 4, 8]) == [2, 1, 0, 3])",
+            "assert(Solution().smallerNumbersThanCurrent(nums=[7, 7, 7, 7]) == [0, 0, 0, 0])"
+        ]
+    },
+    "rings-and-rods": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2103_ringsAndRods.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2103_ringsAndRods.py",
+        "id": "2103",
+        "slug": "rings-and-rods",
+        "test_lines": [
+            "assert(Solution().countPoints(rings=B0B6G0R6R0R6G9) == 1)",
+            "assert(Solution().countPoints(rings=B0R0G0R9R0B0G0) == 1)",
+            "assert(Solution().countPoints(rings=G4) == 0)"
+        ]
+    },
+    "sliding-window-median": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0480_slidingWindowMedian.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0480_slidingWindowMedian.py",
+        "id": "0480",
+        "slug": "sliding-window-median",
+        "test_lines": [
+            "assert(Solution().medianSlidingWindow(nums=[1, 3, -1, -3, 5, 3, 6, 7], k=3) == [1.0, -1.0, -1.0, 3.0, 5.0, 6.0])",
+            "assert(Solution().medianSlidingWindow(nums=[1, 2, 3, 4, 2, 3, 1, 4, 2], k=3) == [2.0, 3.0, 3.0, 3.0, 2.0, 3.0, 2.0])"
+        ]
+    },
+    "maximum-distance-between-a-pair-of-values": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1855_maximumDistanceBetweenAPairOfValues.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1855_maximumDistanceBetweenAPairOfValues.py",
+        "id": "1855",
+        "slug": "maximum-distance-between-a-pair-of-values",
+        "test_lines": [
+            "assert(Solution().maxDistance(nums1=[55, 30, 5, 4, 2], nums2=[100, 20, 10, 10, 5]) == 2)",
+            "assert(Solution().maxDistance(nums1=[2, 2, 2], nums2=[10, 10, 1]) == 1)",
+            "assert(Solution().maxDistance(nums1=[30, 29, 19, 5], nums2=[25, 25, 25, 25, 25]) == 2)"
+        ]
+    },
+    "lexicographically-smallest-palindrome": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2697_lexicographicallySmallestPalindrome.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2697_lexicographicallySmallestPalindrome.py",
+        "id": "2697",
+        "slug": "lexicographically-smallest-palindrome",
+        "test_lines": [
+            "assert(Solution().makeSmallestPalindrome(s=egcfe) == efcfe)",
+            "assert(Solution().makeSmallestPalindrome(s=abcd) == abba)",
+            "assert(Solution().makeSmallestPalindrome(s=seven) == neven)"
+        ]
+    },
+    "minimum-subsequence-in-non-increasing-order": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1403_minimumSubsequenceInNonIncreasingOrder.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1403_minimumSubsequenceInNonIncreasingOrder.py",
+        "id": "1403",
+        "slug": "minimum-subsequence-in-non-increasing-order",
+        "test_lines": [
+            "assert(Solution().minSubsequence(nums=[4, 3, 10, 9, 8]) == [10, 9])",
+            "assert(Solution().minSubsequence(nums=[4, 4, 7, 6, 7]) == [7, 7, 6])"
+        ]
+    },
+    "distribute-candies": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0575_distributeCandies.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0575_distributeCandies.py",
+        "id": "0575",
+        "slug": "distribute-candies",
+        "test_lines": [
+            "assert(Solution().distributeCandies(candyType=[1, 1, 2, 2, 3, 3]) == 3)",
+            "assert(Solution().distributeCandies(candyType=[1, 1, 2, 3]) == 2)",
+            "assert(Solution().distributeCandies(candyType=[6, 6, 6, 6]) == 1)"
+        ]
+    },
+    "nim-game": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0292_nimGame.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0292_nimGame.py",
+        "id": "0292",
+        "slug": "nim-game",
+        "test_lines": [
+            "assert(Solution().canWinNim(n=4) == False)",
+            "assert(Solution().canWinNim(n=1) == True)",
+            "assert(Solution().canWinNim(n=2) == True)"
+        ]
+    },
+    "can-you-eat-your-favorite-candy-on-your-favorite-day": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1744_canYouEatYourFavoriteCandyOnYourFavoriteDay.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1744_canYouEatYourFavoriteCandyOnYourFavoriteDay.py",
+        "id": "1744",
+        "slug": "can-you-eat-your-favorite-candy-on-your-favorite-day",
+        "test_lines": [
+            "assert(Solution().canEat(candiesCount=[7, 4, 5, 3, 8], queries=[[0, 2, 2], [4, 2, 4], [2, 13, 1000000000]]) == [True, False, True])",
+            "assert(Solution().canEat(candiesCount=[5, 2, 6, 4, 1], queries=[[3, 1, 2], [4, 10, 3], [3, 10, 100], [4, 100, 30], [1, 3, 1]]) == [False, True, True, False, False])"
+        ]
+    },
+    "neither-minimum-nor-maximum": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2733_neitherMinimumNorMaximum.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2733_neitherMinimumNorMaximum.py",
+        "id": "2733",
+        "slug": "neither-minimum-nor-maximum",
+        "test_lines": [
+            "assert(Solution().findNonMinOrMax(nums=[3, 2, 1, 4]) == 2)",
+            "assert(Solution().findNonMinOrMax(nums=[1, 2]) == -1)",
+            "assert(Solution().findNonMinOrMax(nums=[2, 1, 3]) == 2)"
+        ]
+    },
+    "delete-operation-for-two-strings": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0583_deleteOperationForTwoStrings.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0583_deleteOperationForTwoStrings.py",
+        "id": "0583",
+        "slug": "delete-operation-for-two-strings",
+        "test_lines": [
+            "assert(Solution().minDistance(word1=sea, word2=eat) == 2)",
+            "assert(Solution().minDistance(word1=leetcode, word2=etco) == 4)"
+        ]
+    },
+    "delete-greatest-value-in-each-row": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2500_deleteGreatestValueInEachRow.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2500_deleteGreatestValueInEachRow.py",
+        "id": "2500",
+        "slug": "delete-greatest-value-in-each-row",
+        "test_lines": [
+            "assert(Solution().deleteGreatestValue(grid=[[1, 2, 4], [3, 3, 1]]) == 8)",
+            "assert(Solution().deleteGreatestValue(grid=[[10]]) == 10)"
+        ]
+    },
+    "course-schedule": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0207_courseSchedule.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0207_courseSchedule.py",
+        "id": "0207",
+        "slug": "course-schedule",
+        "test_lines": [
+            "assert(Solution().canFinish(numCourses=2, prerequisites=[[1, 0]]) == True)",
+            "assert(Solution().canFinish(numCourses=2, prerequisites=[[1, 0], [0, 1]]) == False)"
+        ]
+    },
+    "powerful-integers": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0970_powerfulIntegers.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0970_powerfulIntegers.py",
+        "id": "0970",
+        "slug": "powerful-integers",
+        "test_lines": [
+            "assert(Solution().powerfulIntegers(x=2, y=3, bound=10) == [2, 3, 4, 5, 7, 9, 10])",
+            "assert(Solution().powerfulIntegers(x=3, y=5, bound=15) == [2, 4, 6, 8, 10, 14])"
+        ]
+    },
+    "reverse-nodes-in-k-group": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0025_reverseNodesInKGroup.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0025_reverseNodesInKGroup.py",
+        "id": "0025",
+        "slug": "reverse-nodes-in-k-group",
+        "test_lines": [
+            "assert(Solution().reverseKGroup(head=[1, 2, 3, 4, 5], k=2) == [2, 1, 4, 3, 5])",
+            "assert(Solution().reverseKGroup(head=[1, 2, 3, 4, 5], k=3) == [3, 2, 1, 4, 5])"
+        ]
+    },
+    "sequential-digits": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1291_sequentialDigits.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1291_sequentialDigits.py",
+        "id": "1291",
+        "slug": "sequential-digits",
+        "test_lines": [
+            "assert(Solution().sequentialDigits(low=100, high=300) == [123, 234])",
+            "assert(Solution().sequentialDigits(low=1000, high=13000) == [1234, 2345, 3456, 4567, 5678, 6789, 12345])"
+        ]
+    },
+    "make-costs-of-paths-equal-in-a-binary-tree": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2673_makeCostsOfPathsEqualInABinaryTree.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2673_makeCostsOfPathsEqualInABinaryTree.py",
+        "id": "2673",
+        "slug": "make-costs-of-paths-equal-in-a-binary-tree",
+        "test_lines": [
+            "assert(Solution().minIncrements(n=7, cost=[1, 5, 2, 2, 3, 3, 1]) == 6)",
+            "assert(Solution().minIncrements(n=3, cost=[5, 3, 3]) == 0)"
+        ]
+    },
+    "check-if-every-row-and-column-contains-all-numbers": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2133_checkIfEveryRowAndColumnContainsAllNumbers.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2133_checkIfEveryRowAndColumnContainsAllNumbers.py",
+        "id": "2133",
+        "slug": "check-if-every-row-and-column-contains-all-numbers",
+        "test_lines": [
+            "assert(Solution().checkValid(matrix=[[1, 2, 3], [3, 1, 2], [2, 3, 1]]) == True)",
+            "assert(Solution().checkValid(matrix=[[1, 1, 1], [1, 2, 3], [1, 2, 3]]) == False)"
+        ]
+    },
+    "valid-arrangement-of-pairs": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2097_validArrangementOfPairs.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2097_validArrangementOfPairs.py",
+        "id": "2097",
+        "slug": "valid-arrangement-of-pairs",
+        "test_lines": [
+            "assert(Solution().validArrangement(pairs=[[5, 1], [4, 5], [11, 9], [9, 4]]) == [[11, 9], [9, 4], [4, 5], [5, 1]])",
+            "assert(Solution().validArrangement(pairs=[[1, 3], [3, 2], [2, 1]]) == [[1, 3], [3, 2], [2, 1]])",
+            "assert(Solution().validArrangement(pairs=[[1, 2], [1, 3], [2, 1]]) == [[1, 2], [2, 1], [1, 3]])"
+        ]
+    },
+    "maximum-sum-queries": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2736_maximumSumQueries.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2736_maximumSumQueries.py",
+        "id": "2736",
+        "slug": "maximum-sum-queries",
+        "test_lines": [
+            "assert(Solution().maximumSumQueries(nums1=[4, 3, 1, 2], nums2=[2, 4, 9, 5], queries=[[4, 1], [1, 3], [2, 5]]) == [6, 10, 7])",
+            "assert(Solution().maximumSumQueries(nums1=[3, 2, 5], nums2=[2, 3, 4], queries=[[4, 4], [3, 2], [1, 1]]) == [9, 9, 9])",
+            "assert(Solution().maximumSumQueries(nums1=[2, 1], nums2=[2, 3], queries=[[3, 3]]) == [-1])"
+        ]
+    },
+    "reachable-nodes-with-restrictions": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2368_reachableNodesWithRestrictions.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2368_reachableNodesWithRestrictions.py",
+        "id": "2368",
+        "slug": "reachable-nodes-with-restrictions",
+        "test_lines": [
+            "assert(Solution().reachableNodes(n=7, edges=[[0, 1], [1, 2], [3, 1], [4, 0], [0, 5], [5, 6]], restricted=[4, 5]) == 4)",
+            "assert(Solution().reachableNodes(n=7, edges=[[0, 1], [0, 2], [0, 5], [0, 4], [3, 2], [6, 5]], restricted=[4, 2, 1]) == 3)"
+        ]
+    },
+    "ugly-number-iii": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1201_uglyNumberIii.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1201_uglyNumberIii.py",
+        "id": "1201",
+        "slug": "ugly-number-iii",
+        "test_lines": [
+            "assert(Solution().nthUglyNumber(n=3, a=2, b=3, c=5) == 4)",
+            "assert(Solution().nthUglyNumber(n=4, a=2, b=3, c=4) == 6)",
+            "assert(Solution().nthUglyNumber(n=5, a=2, b=11, c=13) == 10)"
+        ]
+    },
+    "4-sum-ii": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0454_4SumIi.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0454_4SumIi.py",
+        "id": "0454",
+        "slug": "4-sum-ii",
+        "test_lines": [
+            "assert(Solution().fourSumCount(nums1=[1, 2], nums2=[-2, -1], nums3=[-1, 2], nums4=[0, 2]) == 2)",
+            "assert(Solution().fourSumCount(nums1=[0], nums2=[0], nums3=[0], nums4=[0]) == 1)"
+        ]
+    },
+    "kth-missing-positive-number": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1539_kthMissingPositiveNumber.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1539_kthMissingPositiveNumber.py",
+        "id": "1539",
+        "slug": "kth-missing-positive-number",
+        "test_lines": [
+            "assert(Solution().findKthPositive(arr=[2, 3, 4, 7, 11], k=5) == 9)",
+            "assert(Solution().findKthPositive(arr=[1, 2, 3, 4], k=2) == 6)"
+        ]
+    },
+    "minimize-maximum-pair-sum-in-array": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1877_minimizeMaximumPairSumInArray.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1877_minimizeMaximumPairSumInArray.py",
+        "id": "1877",
+        "slug": "minimize-maximum-pair-sum-in-array",
+        "test_lines": [
+            "assert(Solution().minPairSum(nums=[3, 5, 2, 3]) == 7)",
+            "assert(Solution().minPairSum(nums=[3, 5, 4, 2, 4, 6]) == 8)"
+        ]
+    },
+    "minimum-difference-between-highest-and-lowest-of-k-scores": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1984_minimumDifferenceBetweenHighestAndLowestOfKScores.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1984_minimumDifferenceBetweenHighestAndLowestOfKScores.py",
+        "id": "1984",
+        "slug": "minimum-difference-between-highest-and-lowest-of-k-scores",
+        "test_lines": [
+            "assert(Solution().minimumDifference(nums=[90], k=1) == 0)",
+            "assert(Solution().minimumDifference(nums=[9, 4, 1, 7], k=2) == 2)"
+        ]
+    },
+    "valid-parenthesis-string": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0678_validParenthesisString.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0678_validParenthesisString.py",
+        "id": "0678",
+        "slug": "valid-parenthesis-string",
+        "test_lines": [
+            "assert(Solution().checkValidString(s=()) == True)",
+            "assert(Solution().checkValidString(s=(*)) == True)",
+            "assert(Solution().checkValidString(s=(*))) == True)"
+        ]
+    },
+    "count-anagrams": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2514_countAnagrams.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2514_countAnagrams.py",
+        "id": "2514",
+        "slug": "count-anagrams",
+        "test_lines": [
+            "assert(Solution().countAnagrams(s=too hot) == 18)",
+            "assert(Solution().countAnagrams(s=aa) == 1)"
+        ]
+    },
+    "alternating-digit-sum": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2544_alternatingDigitSum.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2544_alternatingDigitSum.py",
+        "id": "2544",
+        "slug": "alternating-digit-sum",
+        "test_lines": [
+            "assert(Solution().alternateDigitSum(n=521) == 4)",
+            "assert(Solution().alternateDigitSum(n=111) == 1)",
+            "assert(Solution().alternateDigitSum(n=886996) == 0)"
+        ]
+    },
+    "longest-repeating-character-replacement": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0424_longestRepeatingCharacterReplacement.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0424_longestRepeatingCharacterReplacement.py",
+        "id": "0424",
+        "slug": "longest-repeating-character-replacement",
+        "test_lines": [
+            "assert(Solution().characterReplacement(s=ABAB, k=2) == 4)",
+            "assert(Solution().characterReplacement(s=AABABBA, k=1) == 4)"
+        ]
+    },
+    "satisfiability-of-equality-equations": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0990_satisfiabilityOfEqualityEquations.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0990_satisfiabilityOfEqualityEquations.py",
+        "id": "0990",
+        "slug": "satisfiability-of-equality-equations",
+        "test_lines": [
+            "assert(Solution().equationsPossible(equations=['a==b', 'b!=a']) == False)",
+            "assert(Solution().equationsPossible(equations=['b==a', 'a==b']) == True)"
+        ]
+    },
+    "minimum-time-to-complete-trips": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2187_minimumTimeToCompleteTrips.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2187_minimumTimeToCompleteTrips.py",
+        "id": "2187",
+        "slug": "minimum-time-to-complete-trips",
+        "test_lines": [
+            "assert(Solution().minimumTime(time=[1, 2, 3], totalTrips=5) == 3)",
+            "assert(Solution().minimumTime(time=[2], totalTrips=1) == 2)"
+        ]
+    },
+    "minimum-distance-to-the-target-element": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1848_minimumDistanceToTheTargetElement.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1848_minimumDistanceToTheTargetElement.py",
+        "id": "1848",
+        "slug": "minimum-distance-to-the-target-element",
+        "test_lines": [
+            "assert(Solution().getMinDistance(nums=[1, 2, 3, 4, 5], target=5, start=3) == 1)",
+            "assert(Solution().getMinDistance(nums=[1], target=1, start=0) == 0)",
+            "assert(Solution().getMinDistance(nums=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1], target=1, start=0) == 0)"
+        ]
+    },
+    "magic-squares-in-grid": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0840_magicSquaresInGrid.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0840_magicSquaresInGrid.py",
+        "id": "0840",
+        "slug": "magic-squares-in-grid",
+        "test_lines": [
+            "assert(Solution().numMagicSquaresInside(grid=[[4, 3, 8, 4], [9, 5, 1, 9], [2, 7, 6, 2]]) == 1)",
+            "assert(Solution().numMagicSquaresInside(grid=[[8]]) == 0)"
+        ]
+    },
+    "count-good-numbers": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1922_countGoodNumbers.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1922_countGoodNumbers.py",
+        "id": "1922",
+        "slug": "count-good-numbers",
+        "test_lines": [
+            "assert(Solution().countGoodNumbers(n=1) == 5)",
+            "assert(Solution().countGoodNumbers(n=4) == 400)",
+            "assert(Solution().countGoodNumbers(n=50) == 564908303)"
+        ]
+    },
+    "longest-substring-with-at-least-k-repeating-characters": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0395_longestSubstringWithAtLeastKRepeatingCharacters.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0395_longestSubstringWithAtLeastKRepeatingCharacters.py",
+        "id": "0395",
+        "slug": "longest-substring-with-at-least-k-repeating-characters",
+        "test_lines": [
+            "assert(Solution().longestSubstring(s=aaabb, k=3) == 3)",
+            "assert(Solution().longestSubstring(s=ababbc, k=2) == 5)"
+        ]
+    },
+    "longest-subsequence-with-limited-sum": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2389_longestSubsequenceWithLimitedSum.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2389_longestSubsequenceWithLimitedSum.py",
+        "id": "2389",
+        "slug": "longest-subsequence-with-limited-sum",
+        "test_lines": [
+            "assert(Solution().answerQueries(nums=[4, 5, 2, 1], queries=[3, 10, 21]) == [2, 3, 4])",
+            "assert(Solution().answerQueries(nums=[2, 3, 4, 5], queries=[1]) == [0])"
+        ]
+    },
+    "third-maximum-number": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0414_thirdMaximumNumber.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0414_thirdMaximumNumber.py",
+        "id": "0414",
+        "slug": "third-maximum-number",
+        "test_lines": [
+            "assert(Solution().thirdMax(nums=[3, 2, 1]) == 1)",
+            "assert(Solution().thirdMax(nums=[1, 2]) == 2)",
+            "assert(Solution().thirdMax(nums=[2, 2, 3, 1]) == 1)"
+        ]
+    },
+    "substrings-of-size-three-with-distinct-characters": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1876_substringsOfSizeThreeWithDistinctCharacters.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1876_substringsOfSizeThreeWithDistinctCharacters.py",
+        "id": "1876",
+        "slug": "substrings-of-size-three-with-distinct-characters",
+        "test_lines": [
+            "assert(Solution().countGoodSubstrings(s=xyzzaz) == 1)",
+            "assert(Solution().countGoodSubstrings(s=aababcabc) == 4)"
+        ]
+    },
+    "minimum-changes-to-make-alternating-binary-string": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1758_minimumChangesToMakeAlternatingBinaryString.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1758_minimumChangesToMakeAlternatingBinaryString.py",
+        "id": "1758",
+        "slug": "minimum-changes-to-make-alternating-binary-string",
+        "test_lines": [
+            "assert(Solution().minOperations(s=0100) == 1)",
+            "assert(Solution().minOperations(s=10) == 0)",
+            "assert(Solution().minOperations(s=1111) == 2)"
+        ]
+    },
+    "jump-game-ii": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0045_jumpGameIi.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0045_jumpGameIi.py",
+        "id": "0045",
+        "slug": "jump-game-ii",
+        "test_lines": [
+            "assert(Solution().jump(nums=[2, 3, 1, 1, 4]) == 2)",
+            "assert(Solution().jump(nums=[2, 3, 0, 1, 4]) == 2)"
+        ]
+    },
+    "sum-of-subarray-ranges": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2104_sumOfSubarrayRanges.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2104_sumOfSubarrayRanges.py",
+        "id": "2104",
+        "slug": "sum-of-subarray-ranges",
+        "test_lines": [
+            "assert(Solution().subArrayRanges(nums=[1, 2, 3]) == 4)",
+            "assert(Solution().subArrayRanges(nums=[1, 3, 3]) == 4)",
+            "assert(Solution().subArrayRanges(nums=[4, -2, -3, 4, 1]) == 59)"
+        ]
+    },
+    "longest-cycle-in-a-graph": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2360_longestCycleInAGraph.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2360_longestCycleInAGraph.py",
+        "id": "2360",
+        "slug": "longest-cycle-in-a-graph",
+        "test_lines": [
+            "assert(Solution().longestCycle(edges=[3, 3, 4, 2, 3]) == 3)",
+            "assert(Solution().longestCycle(edges=[2, -1, 3, 1]) == -1)"
+        ]
+    },
+    "count-number-of-maximum-bitwise-or-subsets": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2044_countNumberOfMaximumBitwiseOrSubsets.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2044_countNumberOfMaximumBitwiseOrSubsets.py",
+        "id": "2044",
+        "slug": "count-number-of-maximum-bitwise-or-subsets",
+        "test_lines": [
+            "assert(Solution().countMaxOrSubsets(nums=[3, 1]) == 2)",
+            "assert(Solution().countMaxOrSubsets(nums=[2, 2, 2]) == 7)",
+            "assert(Solution().countMaxOrSubsets(nums=[3, 2, 1, 5]) == 6)"
+        ]
+    },
+    "the-kth-factor-of-n": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1492_theKthFactorOfN.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1492_theKthFactorOfN.py",
+        "id": "1492",
+        "slug": "the-kth-factor-of-n",
+        "test_lines": [
+            "assert(Solution().kthFactor(n=12, k=3) == 3)",
+            "assert(Solution().kthFactor(n=7, k=2) == 7)",
+            "assert(Solution().kthFactor(n=4, k=4) == -1)"
+        ]
+    },
+    "two-sum": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_0001_twoSum.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_0001_twoSum.py",
+        "id": "0001",
+        "slug": "two-sum",
+        "test_lines": [
+            "assert(Solution().twoSum(nums=[2, 7, 11, 15], target=9) == [0, 1])",
+            "assert(Solution().twoSum(nums=[3, 2, 4], target=6) == [1, 2])",
+            "assert(Solution().twoSum(nums=[3, 3], target=6) == [0, 1])"
+        ]
+    },
+    "minimum-cost-to-make-at-least-one-valid-path-in-a-grid": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1368_minimumCostToMakeAtLeastOneValidPathInAGrid.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1368_minimumCostToMakeAtLeastOneValidPathInAGrid.py",
+        "id": "1368",
+        "slug": "minimum-cost-to-make-at-least-one-valid-path-in-a-grid",
+        "test_lines": [
+            "assert(Solution().minCost(grid=[[1, 1, 1, 1], [2, 2, 2, 2], [1, 1, 1, 1], [2, 2, 2, 2]]) == 3)",
+            "assert(Solution().minCost(grid=[[1, 1, 3], [3, 2, 2], [1, 1, 4]]) == 0)",
+            "assert(Solution().minCost(grid=[[1, 2], [4, 3]]) == 1)"
+        ]
+    },
+    "create-components-with-same-value": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2440_createComponentsWithSameValue.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2440_createComponentsWithSameValue.py",
+        "id": "2440",
+        "slug": "create-components-with-same-value",
+        "test_lines": [
+            "assert(Solution().componentValue(nums=[6, 2, 2, 2, 6], edges=[[0, 1], [1, 2], [1, 3], [3, 4]]) == 2)",
+            "assert(Solution().componentValue(nums=[2], edges=[]) == 0)"
+        ]
+    },
+    "capitalize-the-title": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2129_capitalizeTheTitle.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2129_capitalizeTheTitle.py",
+        "id": "2129",
+        "slug": "capitalize-the-title",
+        "test_lines": [
+            "assert(Solution().capitalizeTitle(title=capiTalIze tHe titLe) == Capitalize The Title)",
+            "assert(Solution().capitalizeTitle(title=First leTTeR of EACH Word) == First Letter of Each Word)",
+            "assert(Solution().capitalizeTitle(title=i lOve leetcode) == i Love Leetcode)"
+        ]
+    },
+    "moving-stones-until-consecutive-ii": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1040_movingStonesUntilConsecutiveIi.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1040_movingStonesUntilConsecutiveIi.py",
+        "id": "1040",
+        "slug": "moving-stones-until-consecutive-ii",
+        "test_lines": [
+            "assert(Solution().numMovesStonesII(stones=[7, 4, 9]) == [1, 2])",
+            "assert(Solution().numMovesStonesII(stones=[6, 5, 4, 3, 10]) == [2, 3])"
+        ]
+    },
+    "construct-the-longest-new-string": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2745_constructTheLongestNewString.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2745_constructTheLongestNewString.py",
+        "id": "2745",
+        "slug": "construct-the-longest-new-string",
+        "test_lines": [
+            "assert(Solution().longestString(x=2, y=5, z=1) == 12)",
+            "assert(Solution().longestString(x=3, y=2, z=2) == 14)"
+        ]
+    },
+    "maximum-profit-of-operating-a-centennial-wheel": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_1599_maximumProfitOfOperatingACentennialWheel.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_1599_maximumProfitOfOperatingACentennialWheel.py",
+        "id": "1599",
+        "slug": "maximum-profit-of-operating-a-centennial-wheel",
+        "test_lines": [
+            "assert(Solution().minOperationsMaxProfit(customers=[8, 3], boardingCost=5, runningCost=6) == 3)",
+            "assert(Solution().minOperationsMaxProfit(customers=[10, 9, 6], boardingCost=6, runningCost=4) == 7)",
+            "assert(Solution().minOperationsMaxProfit(customers=[3, 4, 0, 5, 1], boardingCost=1, runningCost=92) == -1)"
+        ]
+    },
+    "minimum-fuel-cost-to-report-to-the-capital": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2477_minimumFuelCostToReportToTheCapital.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2477_minimumFuelCostToReportToTheCapital.py",
+        "id": "2477",
+        "slug": "minimum-fuel-cost-to-report-to-the-capital",
+        "test_lines": [
+            "assert(Solution().minimumFuelCost(roads=[[0, 1], [0, 2], [0, 3]], seats=5) == 3)",
+            "assert(Solution().minimumFuelCost(roads=[[3, 1], [3, 2], [1, 0], [0, 4], [0, 5], [4, 6]], seats=2) == 7)",
+            "assert(Solution().minimumFuelCost(roads=[], seats=1) == 0)"
+        ]
+    },
+    "disconnect-path-in-a-binary-matrix-by-at-most-one-flip": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2556_disconnectPathInABinaryMatrixByAtMostOneFlip.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2556_disconnectPathInABinaryMatrixByAtMostOneFlip.py",
+        "id": "2556",
+        "slug": "disconnect-path-in-a-binary-matrix-by-at-most-one-flip",
+        "test_lines": [
+            "assert(Solution().isPossibleToCutPath(grid=[[1, 1, 1], [1, 0, 0], [1, 1, 1]]) == True)",
+            "assert(Solution().isPossibleToCutPath(grid=[[1, 1, 1], [1, 0, 1], [1, 1, 1]]) == False)"
+        ]
+    },
+    "minimum-bit-flips-to-convert-number": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2220_minimumBitFlipsToConvertNumber.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2220_minimumBitFlipsToConvertNumber.py",
+        "id": "2220",
+        "slug": "minimum-bit-flips-to-convert-number",
+        "test_lines": [
+            "assert(Solution().minBitFlips(start=10, goal=7) == 3)",
+            "assert(Solution().minBitFlips(start=3, goal=4) == 3)"
+        ]
+    },
+    "grid-game": {
+        "test": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/test_q_2017_gridGame.py",
+        "solution": "/Users/archandas/Desktop/11711/anlp-hw4/evaluation/test_cases/q_2017_gridGame.py",
+        "id": "2017",
+        "slug": "grid-game",
+        "test_lines": [
+            "assert(Solution().gridGame(grid=[[2, 5, 4], [1, 5, 1]]) == 4)",
+            "assert(Solution().gridGame(grid=[[3, 3, 1], [8, 5, 2]]) == 4)",
+            "assert(Solution().gridGame(grid=[[1, 3, 1, 15], [1, 3, 3, 1]]) == 7)"
+        ]
+    }
+}
