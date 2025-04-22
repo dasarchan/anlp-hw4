@@ -32,12 +32,11 @@ def execute_debug_agent(code, problem_description, openai_handler):
     result = debug_agent.run()
 
     # Print the results
-
-    print("\n" + "=" * 50)
-    print("DEBUGGING RESULTS")
-    print("=" * 50)
-    print("\nOriginal Code:")
-    print(result["original_code"])
+    # print("\n" + "=" * 50)
+    # print("DEBUGGING RESULTS")
+    # print("=" * 50)
+    # print("\nOriginal Code:")
+    # print(result["original_code"])
 
     print("\nFixed Code:")
     print(result["fixed_code"])
@@ -45,17 +44,10 @@ def execute_debug_agent(code, problem_description, openai_handler):
     print("\nNumber of turns:", result["turns"])
 
     # Save the full conversation history to a file
-
     # with open("debug_conversation.json", "w") as f:
     #     json.dump(result["conversation"], f, indent=2)
 
     # print("\nFull conversation history saved to debug_conversation.json")
-
-    with open("debug_conversation.json", "w") as f:
-        json.dump(result["conversation"], f, indent=2)
-
-    print("\nFull conversation history saved to debug_conversation.json")
-
     return result["fixed_code"], result["turns"], result["conversation"]
 
 def main():
