@@ -267,6 +267,10 @@ Please help me identify and fix any bugs in this code.
                     code_blocks = re.findall(r"```python\n(.*?)\n```", content, re.DOTALL)
                     if code_blocks:
                         return code_blocks[0]
+                    else:
+                        code_blocks = re.findall(r"```\n(.*?)\n```", content, re.DOTALL)
+                        if code_blocks:
+                            return code_blocks[0]
                         
                 # If we're here, either FIXED_CODE wasn't found or there was no code block
         return "Error: No fixed code found. Please check the conversation history."

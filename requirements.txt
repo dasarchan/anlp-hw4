@@ -8,6 +8,7 @@ python-dotenv
 gym
 bs4
 beautifulsoup4
-requests
-json
 typing
+vllm
+torch
+pexpect

@@ -16,12 +16,12 @@ PROBLEM_DESCRIPTION = "There are some stones in different positions on the X-axi
 
 def main():
     llama_handler = Llama3Handler(
-        model_name="meta-llama/Meta-Llama-3.1-8B-Instruct",
+        model_name="meta-llama/Meta-Llama-3-8B-Instruct",
         gpu_memory_utilization=0.9,
         max_model_len=8192,
         tensor_parallel_size=1,
         dtype="bfloat16",
-        use_tool_calling=True
+        # use_tool_calling=True
     )
     
     # Initialize the LLM Debug Agent

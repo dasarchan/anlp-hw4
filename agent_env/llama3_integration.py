@@ -44,12 +44,12 @@ class Llama3Handler(LLMHandler):
     
     def __init__(
         self,
-        model_name: str = "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        model_name: str = "meta-llama/Meta-Llama-3-8B-Instruct",
         gpu_memory_utilization: float = 0.9,
         max_model_len: int = 8192,
         tensor_parallel_size: int = 1,
         dtype: str = "bfloat16",
-        use_tool_calling: bool = True
+        # use_tool_calling: bool = True
     ):
         """
         Initialize the Llama 3.1 handler with vLLM.
@@ -78,11 +78,11 @@ class Llama3Handler(LLMHandler):
             max_model_len=max_model_len,
             dtype=torch_dtype,
             trust_remote_code=True,
-            enable_tool_calls=use_tool_calling,
-            tool_call_parser="llama3_json",
+            # enable_tool_calls=use_tool_calling,
+            # tool_call_parser="llama3_json",
         )
         
-        self.use_tool_calling = use_tool_calling
+        # self.use_tool_calling = use_tool_calling
         
     def __call__(
         self, 
@@ -125,20 +125,21 @@ class Llama3Handler(LLMHandler):
         )
         
         # If using tool calling, add tool specification
-        if self.use_tool_calling and tools:
-            # Configure sampling params with tool specification
-            sampling_params = SamplingParams(
-                temperature=0.7,
-                top_p=0.95,
-                max_tokens=1024,
-                stop_token_ids=[tokenizer.eos_token_id],
-                tool_choices=tools
-            )
+        # if tools:
+        #     # Configure sampling params with tool specification
+        #     sampling_params = SamplingParams(
+        #         temperature=0.7,
+        #         top_p=0.95,
+        #         max_tokens=1024,
+        #         stop_token_ids=[tokenizer.eos_token_id],
+        #         tool_choices=tools
+        #     )
             
         # Generate completion using vLLM
-        outputs = self.model.generate(
-            prompts=[formatted_prompt],
+        outputs = self.model.chat(
+            messages,
             sampling_params=sampling_params,
+            tools=tools
         )
         
         # Process the output
@@ -153,7 +154,7 @@ class Llama3Handler(LLMHandler):
         # Extract tool calls if present
         # Note: vLLM's tool parser should handle most of this, but we need to 
         # extract the structured response format here
-        if self.use_tool_calling and "Action:" in raw_output:
+        if "Action:" in raw_output:
             # Simple parsing for tool calls in the format:
             # Action: tool_name
             # Action Input: {"param1": "value1"}
