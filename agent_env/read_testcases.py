@@ -75,7 +75,7 @@ def main():
         example for example in data["test"] if example["language"] == "python3"
     ]
 
-    results_file = "debug_results_with_testcases.json"
+    results_file = "debug_results_with_testcases_conversation.json"
     # Load existing results if file exists
     results = {}
     if os.path.exists(results_file):
@@ -87,7 +87,7 @@ def main():
 
     # Randomly select 200 instances or use all if less than 200
     random.seed(999)
-    sample_size = min(400, len(json_data))
+    sample_size = min(200, len(json_data))
     sampled_indices = random.sample(range(len(json_data)), sample_size)
     for i in tqdm(sampled_indices, desc="Processing examples"):
         id = (json_data[i]["slug"], extract_bug_type(json_data[i]["filename"]))
@@ -136,7 +136,7 @@ def main():
             "id": id,
             "fixed_code": fixed_code,
             "num_turns": num_turns,
-            # "conversation": conversation
+            "conversation": conversation
         }
 
         # Save updated results

@@ -1,6 +1,8 @@
 import os
 import sys
 import json
+import signal
+import time
 from typing import Dict, List, Any, Optional
 from tqdm import tqdm
 
@@ -94,8 +96,6 @@ def main():
         # print("problem_description: ", problem_description)
         
         # Execute debug agent and get results
-        import signal
-        import time
         
         # Define timeout handler
         def timeout_handler(signum, frame):
@@ -120,7 +120,7 @@ def main():
             "id": id,
             "fixed_code": fixed_code,
             "num_turns": num_turns,
-            # "conversation": conversation
+            "conversation": conversation
         }
         
         # Save updated results
